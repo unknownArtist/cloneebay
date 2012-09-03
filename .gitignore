@@ -4,3 +4,7 @@ README.txt
 demos/
 extras/documentation
 
+/nbproject/private/
+/public/images
+/library/Zend
+
