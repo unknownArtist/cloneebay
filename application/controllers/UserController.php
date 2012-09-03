@@ -18,6 +18,20 @@ class UserController extends Zend_Controller_Action
         // action body
         $form = new Application_Form_Register();
         $this->view->form = $form;
+
+         if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+
+                    print_r($form->getvalues());
+                    die();
+                }
+            }
     }
 
     public function signInAction()
