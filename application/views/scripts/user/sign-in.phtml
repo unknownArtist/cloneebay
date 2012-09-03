@@ -1,4 +1,13 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>User</b> and script/action name <b>signIn</b></p>
+<style type="text/css">
+	#Login, #email, #password {
+
+		width: 100px;
+		display: block;
+	}
+</style>
+<?php echo $this->signIn; ?>
+<div>	
+	<?php if(isset($this->SignUpError))
+			echo "<div style='color:red'>".$this->SignUpError."</div>";
+	 ?>
 </div>

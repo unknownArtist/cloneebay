@@ -53,15 +53,50 @@ class UserController extends Zend_Controller_Action
 
     public function signInAction()
     {
+        $form = new Application_Form_SignIn();
+        $this->view->signIn = $form;
+
+        $authAdapter = $this->getAuthAdapter();
+           
+        if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                $email    = $form->getValue('email');
+                $password = $form->getValue('password');
+                $authAdapter->setIdentity($email)
+                            ->setCredential($password);
+                
+             $auth = Zend_Auth::getInstance();
         
+             $result = $auth->authenticate($authAdapter);
+         
+        
+             if($result->isValid())
+               {
+                    $auth->getStorage()->write($authAdapter->getResultRowObject(array('id', 'f_name','status')));
+                    $this->_redirect('index');
+               }
+               else
+            {
+                $form->populate($formData);
+                $this->view->SignUpError = "Invalid Username or Password";
+            }
+                
+            } 
+            else
+            {
+                $form->populate($formData);
+            }
+               
+        }   
     }
 
-    public function activateUserAction()
-    {
-        // action body
-    }
-
-    public function sendMailAction($username,$email)
+    public function sendMailAction($username, $email)
     {
         
         $smtpConfigs = array(
@@ -87,8 +122,26 @@ class UserController extends Zend_Controller_Action
              ->send($smtpTransportObject);
     }
 
+    private function getAuthAdapter()
+    {
+        $auth = new Zend_Auth_Adapter_DbTable(Zend_Db_Table::getDefaultAdapter());
+        $auth->setTableName('user_registration')
+             ->setIdentityColumn('email')
+             ->setCredentialColumn('password');
+        
+        return $auth;
+    }
+
+    public function logoutAction()
+    {
+        Zend_Auth::getInstance()->clearIdentity();
+        $this->_redirect('index');
+    }
+
 
 }
+
+
 
 
 
