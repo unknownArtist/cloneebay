@@ -115,7 +115,7 @@ class UserController extends Zend_Controller_Action
             
             'auth'          =>      'login',
             'username'      =>      'nayatelorg',
-            'password'      =>      'quickbrown123',
+            'password'      =>      'brownquick321',
             'ssl'           =>      'ssl',
             'port'          =>       465
             
