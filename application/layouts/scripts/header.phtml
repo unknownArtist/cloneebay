@@ -47,12 +47,16 @@
 <li><a href="#">Post a Free Ad</a></li>
 
 <li><a href="#">Community</a></li>
-
+<?php if(!Zend_Auth::getInstance()->hasIdentity()): ?>
 <li><a href="/user/sign-in">Sign In</a></li>
+<?php endif; ?>
 
 <li><a href="#">Join Now</a></li>
 
 <li><a href="#">Cart</a></li>
+<?php if(Zend_Auth::getInstance()->hasIdentity()): ?>
+<li><a href="/user/logout">logout</a></li>
+<?php endif; ?>
 
 </ul>
 
