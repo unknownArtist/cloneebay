@@ -42,6 +42,18 @@ class UserController extends Zend_Controller_Action
                     'password'          =>  $form->getValue('password'),
                    );
 
+                $emailAddress = $form->getValue('email');
+                
+                $where = "email = '$emailAddress'";
+                $temp = $insertRegistrationData->fetchAll($where)->count();
+                if($temp > 0)
+                {
+                   $this->view->errorMsg = "This email is already registered";
+                   $form->populate($formData);
+                  
+                   
+                }
+
                    $insertRegistrationData->insert($data);
                    $this->sendMailAction($form->getValue('f_name'),$form->getValue('email'));
                    $this->view->successMsg = "Your account has been created";
