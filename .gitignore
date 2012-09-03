@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INSTALL.txt
 LICENSE.txt
 README.txt
@@ -10,3 +11,15 @@ extras/documentation
 
 
 
+=======
+INSTALL.txt
+LICENSE.txt
+README.txt
+demos/
+extras/documentation
+
+/nbproject/private/
+/public/images
+/library/Zend
+
+>>>>>>> 65a1d8a2fd6b88b2d7ebaa18b9754d1edf373c1e
