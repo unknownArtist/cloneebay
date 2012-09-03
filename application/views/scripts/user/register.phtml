@@ -1,33 +1,148 @@
-<h10>REGISTER WITH DIS OR BUYS</h10>
-<div class="register">
+<head>
 
+<style>
+
+.FirstName{
+	
+	
+}
+.FirstName input{
+	cursor: pointer;
+	display: block;
+	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	margin: 0 0 5px;
+	background-color:#D45FFF;
+	width:500px;
+}
+
+label{
+	cursor: pointer;
+	display: block;
+	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	margin: 0 0 5px;
+}
+
+input, textarea, select {
+	-webkit-appearance: none; 
+		background-color: #f8f8f8;
+	border: 1px solid #e8e8e8;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+	color: #8f8f8f;
+	font: 12px/1.5 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	padding: 5px 10px;
+	border-radius: 0;
+}
+
+input, select {
+	height: 30px;
+	width: 200px;
+}
+
+textarea {
+	padding: 10px;
+	resize: both;
+}
+	
+	input:hover, textarea:hover, select:hover { border-color: #dedede; }
+	
+	input:focus, textarea:focus, select:focus { border-color: #ccc; }
+
+input[type="submit"], button {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+	input[type="submit"].medium, button.medium { font-size: 15px; }
+
+	input[type="submit"].large, button.large { font-size: 17px; }
+
+select, option {
+	cursor: pointer;
+	padding: 5px 7px;
+}
+
+/* Chrome, Safari */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #b0b0b0; }
+
+/* Firefox */
+input:-moz-placeholder, textarea:-moz-placeholder { color: #b0b0b0; }
+
+/* jQuery fallback */
+input.placeholder, textarea.placeholder { color: #b0b0b0; }
+
+
+.contact-form, .comments-form { margin: 25px -20px 0 0; }
+
+	.contact-form .input-block, .comments-form .input-block {
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+		.contact-form input { width: 198px; }
+
+	.contact-form .textarea-block, .comments-form .textarea-block { clear: both; }
+
+		.contact-form textarea {
+			height: 150px;
+			width: 678px;
+		}
+
+	.contact-form input[type="submit"], .comments-form input[type="submit"] {
+		margin: 0 0 20px;
+		width: auto;
+	
+	
+	
+	
+
+
+</style>
+
+
+
+</head>
+
+
+
+<div id="search">													<!--search-->
+
+<h10>REGISTER WITH DIS OR BUYS</h10>
+
+
+
+</div>																<!--search-->
+
+
+<div class="register " >
 
 <p1>Get started and create your personal account,  or <a href="#">start a BidsorBuys Buisness account.</a></p1>
 
 <h14>Tell us about yourself! <span> All FIELDS ARE REQUIRED</span></h14>
+
+
+</style>
+
+
+<div class="register " >
+
+
+
+
 
 <?php echo $this->form; ?>
 <?php if(isset($this->successMsg))
 	    echo $this->successMsg;
 ?>
 
-<h14 style="margin-left:10px;">I have read and accepted the <a style="text-decoration:none; color:#0000d7;" href="#">User Agreement</a> and <a style="text-decoration:none; color:#0000d7;" href="#">Privacy Policy</a></h14>
-
-  <div class="regis_button"></div>
-
-
-
-
 
 </div>
-
-
-
-
 
 <div class="social">
 
 <h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
 
 </div>
-
