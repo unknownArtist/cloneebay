@@ -121,11 +121,11 @@ class Application_Form_Register extends Zend_Form
         
         $ConfirmPassword = new Zend_Form_Element_Password('confirmPassword');
         $ConfirmPassword->setRequired(TRUE)
-                 ->setLabel('Re-enter your password')
-                  ->addFilter('StripTags')
-                  ->addValidator(new Zend_Validate_Identical('Password'))
-                  ->setErrorMessages(array('pass' => 'Password do not match'))
-                  ->addFilter('StringTrim');
+                        ->setLabel('Re-enter your password')
+                        ->addFilter('StripTags')
+                        ->addValidator(new Zend_Validate_Identical('password'))
+                        ->setErrorMessages(array('pass' => 'Password do not match'))
+                        ->addFilter('StringTrim');
 
         $submit = new Zend_Form_Element_Submit('Submit');
 
@@ -134,12 +134,18 @@ class Application_Form_Register extends Zend_Form
 
         $this->addElements(array(
 
-        	$countries,$FirstName,$LastName,
+        	$countries,
+            $FirstName,
+            $LastName,
             $streetAddress,
-            $zip,$cityOrState,
-            $EmailAddress,$phone,
-            $createBids,$Password,
-            $ConfirmPassword,$submit
+            $zip,
+            $cityOrState,
+            $EmailAddress,
+            $phone,
+            $createBids,
+            $Password,
+            $ConfirmPassword,
+            $submit
 
         	));
 

@@ -16,6 +16,8 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="register"/>
           <actionMethod actionName="signIn"/>
+          <actionMethod actionName="activateUser"/>
+          <actionMethod actionName="sendMail"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -28,6 +30,7 @@
       </layoutsDirectory>
       <modelsDirectory>
         <modelFile modelName="Countries"/>
+        <modelFile modelName="UserRegistration"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -46,6 +49,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="signIn"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="activateUser"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="sendMail"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

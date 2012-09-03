@@ -7,6 +7,9 @@
 <h14>Tell us about yourself! <span> All FIELDS ARE REQUIRED</span></h14>
 
 <?php echo $this->form; ?>
+<?php if(isset($this->successMsg))
+	    echo $this->successMsg;
+?>
 
 <h14 style="margin-left:10px;">I have read and accepted the <a style="text-decoration:none; color:#0000d7;" href="#">User Agreement</a> and <a style="text-decoration:none; color:#0000d7;" href="#">Privacy Policy</a></h14>
 
