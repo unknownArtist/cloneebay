@@ -19,6 +19,7 @@
           <actionMethod actionName="activateUser"/>
           <actionMethod actionName="sendMail"/>
           <actionMethod actionName="logout"/>
+          <actionMethod actionName="activate"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -60,6 +61,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="activate"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

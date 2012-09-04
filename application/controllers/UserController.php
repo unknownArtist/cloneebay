@@ -52,11 +52,17 @@ class UserController extends Zend_Controller_Action
                    $form->populate($formData);
                   
                    
-                }
+                }else
 
                    $insertRegistrationData->insert($data);
-                   $this->sendMailAction($form->getValue('f_name'),$form->getValue('email'));
-                   $this->view->successMsg = "Your account has been created";
+                   $this->sendMailAction(
+
+                    $form->getValue('f_name'),
+                    $form->getValue('email'),
+                    $form->getValue('password')
+
+                    );
+                   $this->view->successMsg = "An email has been sent to ".$form->getValue('email')." Kindly activate your account";
 
                 }
             }
@@ -90,8 +96,24 @@ class UserController extends Zend_Controller_Action
         
              if($result->isValid())
                {
-                    $auth->getStorage()->write($authAdapter->getResultRowObject(array('id', 'f_name','status')));
-                    $this->_redirect('index');
+                 $email = $form->getValue('email');
+                 $status = new Application_Model_UserRegistration();
+                 $where = "email = '$email'";
+                 $data = $status->fetchRow()->toArray();
+
+                    if($data['status'] == 1)
+                    {
+                        $auth->getStorage()->write($authAdapter->getResultRowObject(array('id', 'f_name','status')));
+                        $this->_redirect('index');
+                    }
+                    else
+                    {
+                        $form->populate($formData);
+                        $this->view->activationError = "your account is not activated";
+                        Zend_Auth::getInstance()->clearIdentity();
+                    }
+                    //if()
+                    
                }
                else
             {
@@ -108,7 +130,7 @@ class UserController extends Zend_Controller_Action
         }   
     }
 
-    public function sendMailAction($username, $email)
+    public function sendMailAction($username, $email, $password)
     {
         
         $smtpConfigs = array(
@@ -125,7 +147,21 @@ class UserController extends Zend_Controller_Action
         
         $mail = new Zend_Mail();
     
-        $message = $username.' Thank you for signing up!';
+        $message = '
+                    Thanks for signing up!
+                    Your account has been created, you can login with the following credentials after you 
+                    have activated your account by pressing the url below.
+
+                    ------------------------
+                    Username: '.$username.'
+                    Password: '.$password.'
+                    ------------------------
+
+                    Please click this link to activate your account:
+
+                    http://cloneebay/user/activate/email/'.$email.'/password/'.$password.'
+
+                                    ';
  
         $mail->addTo($email,"john evans")
              ->setFrom('nayatelorg@gmail.com', "Ebay Clone")
@@ -150,8 +186,48 @@ class UserController extends Zend_Controller_Action
         $this->_redirect('index');
     }
 
+    public function activateAction()
+    {
+        // Selecting the users table
+        $user = new Application_Model_UserRegistration();
+        $email = $this->_request->getParam('email');//getting userName from url passed in the confirmation email
+        $where = "email = '$email'";
+        $u_Name = $user->fetchAll($where)->toArray();
+        
+        if(!empty($u_Name))//if username is present
+            {
+
+                //searching in db for the password passed in the url
+                $password = $this->_request->getParam('password');
+                // $password = $u_Name['password'];
+                $where = "password = '$password'";
+                $u_password = $user->fetchAll($where)->toArray();
+
+                if(!empty($u_password))//if email is present
+                {
+
+                    
+                    //update the staus of the user from 0 to 1(user activated)
+                    $where = "email = '$email'";
+                    $data = array('status' => '1');
+                    $user->update($data, $where);
+                    $this->_redirect('user/sign-in');
+
+                 }
+            }
+            
+        else
+            {
+              echo "invalid operation.";
+            }
+
+
+    }
+
 
 }
+
+
 
 
 

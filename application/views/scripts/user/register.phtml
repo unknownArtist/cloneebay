@@ -94,11 +94,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 	.contact-form input[type="submit"], .comments-form input[type="submit"] {
 		margin: 0 0 20px;
 		width: auto;
-	
-	
-	
-	
-
+}
 
 </style>
 
@@ -137,6 +133,10 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 <?php if(isset($this->successMsg))
 	    echo $this->successMsg;
 ?>
+
+<?php if(isset($this->errorMsg))
+	echo "<div style='color: red'>".$this->errorMsg."</div>";
+ ?>
 
 
 </div>

@@ -36,8 +36,10 @@
 			echo "<div style='color:red'>".$this->SignUpError."</div>";
 	 ?>
 </div>
-
-
+<div> <?php if(isset($this->activationError))
+		echo "<div style='color:red'>".$this->activationError."</div>";
+	?>
+</div>
 <!-- <tr>
 
 <td><h12>User ID</h12></td>
