@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Zend_Controller_Action
+class AddPostController extends Zend_Controller_Action
 {
 
     public function init()
@@ -15,7 +15,11 @@ class IndexController extends Zend_Controller_Action
 
     public function addAction()
     {
-        // action body
+        $form = new Application_Form_AddPost();
+        $this->view->form = $form;
+
+        
+        
     }
 
 

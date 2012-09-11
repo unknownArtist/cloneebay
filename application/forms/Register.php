@@ -33,7 +33,7 @@ class Application_Form_Register extends Zend_Form
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
                        ));
-		$FirstName->class = "FirstName";			   
+				   
 					   
 
         $LastName = new Zend_Form_Element_Text('l_name');

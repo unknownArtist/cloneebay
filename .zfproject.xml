@@ -10,6 +10,7 @@
       <controllersDirectory>
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="User">
@@ -21,10 +22,16 @@
           <actionMethod actionName="logout"/>
           <actionMethod actionName="activate"/>
         </controllerFile>
+        <controllerFile controllerName="AddPost">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Register"/>
         <formFile formName="SignIn"/>
+        <formFile formName="AddPost"/>
+        <formFile formName="AddPost"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -34,6 +41,8 @@
       <modelsDirectory>
         <modelFile modelName="Countries"/>
         <modelFile modelName="UserRegistration"/>
+        <modelFile modelName="AddPost"/>
+        <modelFile modelName="Categories"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -64,6 +73,15 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="activate"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="AddPost">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="AddPost">
+            <viewScriptFile forActionName="add"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
