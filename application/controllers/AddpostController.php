@@ -28,7 +28,7 @@ class AddpostController extends Zend_Controller_Action
           $this->electronicsAction();
        }
        elseif ($categories == 'Collectable & Art') {
-           # code.......
+           # code.......  
        }
        elseif ($categories == 'Home, Outdoors & Decor') {
              $this->homeAndDecorationAction();
