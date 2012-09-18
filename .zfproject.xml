@@ -33,6 +33,7 @@
           <actionMethod actionName="fashion"/>
           <actionMethod actionName="motors"/>
           <actionMethod actionName="homeAndDecoration"/>
+          <actionMethod actionName="collectableArt"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -120,6 +121,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Addpost">
             <viewScriptFile forActionName="homeAndDecoration"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Addpost">
+            <viewScriptFile forActionName="collectableArt"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

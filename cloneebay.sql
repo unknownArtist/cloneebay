@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2012 at 12:28 PM
+-- Generation Time: Sep 18, 2012 at 03:08 PM
 -- Server version: 5.5.24
--- PHP Version: 5.3.10-1ubuntu3.2
+-- PHP Version: 5.3.10-1ubuntu3.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -647,17 +647,40 @@ CREATE TABLE IF NOT EXISTS `products` (
   `startPrice` decimal(10,0) NOT NULL,
   `BuyItNowprice` decimal(10,0) NOT NULL,
   `endPrice` decimal(10,0) NOT NULL,
+  `Setting` varchar(300) NOT NULL,
+  `SaleType` varchar(300) NOT NULL,
+  `PropertyType` varchar(300) NOT NULL,
+  `NumerOfBathrooms` int(11) NOT NULL,
+  `NumberofBedrooms` varchar(300) NOT NULL,
+  `ZipPostalCode` int(11) NOT NULL,
+  `StateProvince` varchar(300) NOT NULL,
+  `PropertyAddress` varchar(300) NOT NULL,
+  `SellerStateofResidence` varchar(300) NOT NULL,
+  `mileage` varchar(300) NOT NULL,
+  `ExteriorColor` varchar(300) NOT NULL,
+  `interiorcolor` varchar(300) NOT NULL,
+  `upc` varchar(300) NOT NULL,
+  `type` varchar(300) NOT NULL,
+  `brand` varchar(300) NOT NULL,
+  `model` varchar(300) NOT NULL,
+  `pic` varchar(300) NOT NULL,
+  `vin` varchar(300) NOT NULL,
+  `make` varchar(300) NOT NULL,
+  `releaseYear` varchar(300) NOT NULL,
+  `engine` varchar(300) NOT NULL,
+  `driveType` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `subtitle`, `condition`, `countries`, `url`, `desc`, `auctionOrFixed`, `startPrice`, `BuyItNowprice`, `endPrice`) VALUES
-(1, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 0, 0, 0),
-(2, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 500, 0, 900),
-(3, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 500, 0, 900);
+INSERT INTO `products` (`id`, `title`, `subtitle`, `condition`, `countries`, `url`, `desc`, `auctionOrFixed`, `startPrice`, `BuyItNowprice`, `endPrice`, `Setting`, `SaleType`, `PropertyType`, `NumerOfBathrooms`, `NumberofBedrooms`, `ZipPostalCode`, `StateProvince`, `PropertyAddress`, `SellerStateofResidence`, `mileage`, `ExteriorColor`, `interiorcolor`, `upc`, `type`, `brand`, `model`, `pic`, `vin`, `make`, `releaseYear`, `engine`, `driveType`) VALUES
+(1, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 0, 0, 0, '', '', '', 0, '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(2, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 500, 0, 900, '', '', '', 0, '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(3, 'ear rings', 'something', 'new', 5, 'www.google.com', 'sdfsd', 0, 500, 0, 900, '', '', '', 0, '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(4, 'somthing', 'somthing', 'new', 0, '', '', 1, 500, 123, 900, '', '', '', 0, '', 0, '', '', '', 'somthing', 'somthing', 'somthing', '', '', '', 'somthing', '', '321231', 'somthing', 'somthing', 'somthing', 'somthing');
 
 -- --------------------------------------------------------
 

@@ -77,7 +77,7 @@ class Application_Form_Motors extends Zend_Form
                                       )
                        ));
         
-        $year = new Zend_Form_Element_Text('year');
+        $year = new Zend_Form_Element_Text('releaseYear');
         $year->setRequired(TRUE)
                   ->setLabel('Year')
                   ->addFilter('StripTags')
