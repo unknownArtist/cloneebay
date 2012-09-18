@@ -22,7 +22,7 @@ class AddpostController extends Zend_Controller_Action
           $this->fashionAction();
        }
        elseif ($categories == 'Motors') {
-           echo "its Motors";
+           $this->motorsAction();
        }
        elseif ($categories == 'Electronics') {
           $this->electronicsAction();
@@ -31,7 +31,7 @@ class AddpostController extends Zend_Controller_Action
            # code...
        }
        elseif ($categories == 'Home, Outdoors & Decor') {
-           # code...
+             $this->homeAndDecorationAction();
        }
        elseif ($categories == 'CD & Media') {
           $this->cdmediaAction();
@@ -76,7 +76,21 @@ class AddpostController extends Zend_Controller_Action
                 else{
                     echo "not added";
                 }
-            }
+            
+    
+    }
+  }
+
+    public function motorsAction()
+    {
+        $form = new Application_Form_Motors();
+        $this->view->form = $form;
+    }
+
+    public function homeAndDecorationAction()
+    {
+        $form = new Application_Form_HomeDecoration();
+        $this->view->form = $form;
     }
     ////
     public function electronicsAction()
@@ -154,6 +168,10 @@ class AddpostController extends Zend_Controller_Action
 
 
 }
+
+
+
+
 
 
 
