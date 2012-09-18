@@ -57,6 +57,9 @@ class AddpostController extends Zend_Controller_Action
 
     public function fashionAction()
     {
+
+       $_SESSION = $this->_request->getParam('cat');
+
         $form = new Application_Form_Fashion();
         $this->view->form = $form;
 
@@ -83,7 +86,11 @@ class AddpostController extends Zend_Controller_Action
   }
 
     public function motorsAction()
-    {
+    { 
+      
+        $_SESSION = $this->_request->getParam('cat');
+        
+        
         $form = new Application_Form_Motors();
         $this->view->form = $form;
 
@@ -111,8 +118,11 @@ class AddpostController extends Zend_Controller_Action
 
     public function homeAndDecorationAction()
     {
+      $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_HomeDecoration();
         $this->view->form = $form;
+        echo $this->_request->getParam('cat');
+        die();
         if ($this->getRequest()->isPost()) 
             {
             
@@ -137,6 +147,7 @@ class AddpostController extends Zend_Controller_Action
 
     public function electronicsAction()
     {
+      $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_Electronics();
         $this->view->form = $form;
 
@@ -162,6 +173,7 @@ class AddpostController extends Zend_Controller_Action
 
     public function cdmediaAction()
     {
+      $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_CdMedia();
         $this->view->form = $form;
 
@@ -187,6 +199,7 @@ class AddpostController extends Zend_Controller_Action
 
     public function sportsAction()
     {
+      $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_Sports();
         $this->view->form = $form;
 
@@ -212,6 +225,7 @@ class AddpostController extends Zend_Controller_Action
 
     public function collectableArtAction()
     {
+      $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_CollectableArt();
         $this->view->form = $form;
         if ($this->getRequest()->isPost()) 

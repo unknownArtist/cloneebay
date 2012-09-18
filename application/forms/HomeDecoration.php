@@ -7,6 +7,15 @@ class Application_Form_HomeDecoration extends Zend_Form
     {
         $this->setMethod('post');
         $this->setAction('');
+
+      $category = new Zend_Form_Element_Hidden('category');
+        $category->setRequired(TRUE)
+                  
+                  ->setValue($_SESSION)
+                  ->addFilter('StripTags')
+                  ->addFilter('StringTrim');
+                  $this->addElement($category);
+                  
     	
     	$title = new Zend_Form_Element_Text('title');
         $title->setRequired(TRUE)
@@ -15,7 +24,7 @@ class Application_Form_HomeDecoration extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -29,7 +38,7 @@ class Application_Form_HomeDecoration extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -44,7 +53,7 @@ class Application_Form_HomeDecoration extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -58,7 +67,7 @@ class Application_Form_HomeDecoration extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -72,7 +81,7 @@ class Application_Form_HomeDecoration extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -86,7 +95,7 @@ class Application_Form_HomeDecoration extends Zend_Form
 	                  ->addFilter('StringTrim')
 	                  ->addValidator('regex', true, 
 	                                 array(
-	                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
+	                                       'pattern'=>'/^[(a-zA-Z0-90-9 ]+$/', 
 	                                       'messages'=>array(
 	                                       'regexNotMatch'=>'Kindly Enter only Alphabets'
 	                                      )
@@ -100,7 +109,7 @@ class Application_Form_HomeDecoration extends Zend_Form
 	                  ->addFilter('StringTrim')
 	                  ->addValidator('regex', true, 
 	                                 array(
-	                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
+	                                       'pattern'=>'/^[(a-zA-Z0-90-9 ]+$/', 
 	                                       'messages'=>array(
 	                                       'regexNotMatch'=>'Kindly Enter only Alphabets'
 	                                      )
@@ -131,7 +140,7 @@ class Application_Form_HomeDecoration extends Zend_Form
 	                  ->addFilter('StringTrim')
 	                  ->addValidator('regex', true, 
 	                                 array(
-	                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
+	                                       'pattern'=>'/^[(a-zA-Z0-90-9 ]+$/', 
 	                                       'messages'=>array(
 	                                       'regexNotMatch'=>'Kindly Enter only Alphabets'
 	                                      )
@@ -146,7 +155,7 @@ class Application_Form_HomeDecoration extends Zend_Form
 	                  ->addFilter('StringTrim')
 	                  ->addValidator('regex', true, 
 	                                 array(
-	                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
+	                                       'pattern'=>'/^[(a-zA-Z0-90-9 ]+$/', 
 	                                       'messages'=>array(
 	                                       'regexNotMatch'=>'Kindly Enter only Alphabets'
 	                                      )
@@ -180,7 +189,7 @@ $this->addElement($url);
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-90-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )

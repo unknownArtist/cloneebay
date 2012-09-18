@@ -14,6 +14,14 @@ class Application_Form_Electronics extends Zend_Form
 
 	 $this->setMethod('post');
         $this->setAction('');
+
+        $category = new Zend_Form_Element_Hidden('category');
+        $category->setRequired(TRUE)
+                  
+                  ->setValue($_SESSION)
+                  ->addFilter('StripTags')
+                  ->addFilter('StringTrim');
+                  $this->addElement($category);
     	
     	$title = new Zend_Form_Element_Text('title');
         $title->setRequired(TRUE)
