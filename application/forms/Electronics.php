@@ -152,6 +152,7 @@ class Application_Form_Electronics extends Zend_Form
     		$upc,
     		$type,
     		$brand,
+    		$model,
     		$desc,
     		$auctionOrFixed,
     		$startPrice,
