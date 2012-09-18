@@ -29,6 +29,8 @@ class Application_Form_AddPost extends Zend_Form
                                       )
                        ));
 
+        
+
         // $categories = new Zend_Form_Element_Select('categories');
         // $categories->addMultiOptions($categories)
         //          ->setLabel("Country/Region");

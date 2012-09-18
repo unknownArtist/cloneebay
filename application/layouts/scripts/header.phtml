@@ -3,10 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+ <script src="/js/my.js"></script>
 
 <title>Auction</title>
 
@@ -44,15 +46,15 @@
 
 <ul>
 
-<li><a href="Add-Post/add">Post a Free Ad</a></li>
+<li><a href="addpost/select-catagory">Post a Free Ad</a></li>
 
 <li><a href="#">Community</a></li>
 <?php if(!Zend_Auth::getInstance()->hasIdentity()): ?>
 <li><a href="/user/sign-in">Sign in</a></li>
-<li><a href="/user/register">Sign up</a></li>
+
 <?php endif; ?>
 
-<li><a href="#">Join Now</a></li>
+<li><a href="/user/register">Join Now</a></li>
 
 <li><a href="#">Cart</a></li>
 <?php if(Zend_Auth::getInstance()->hasIdentity()): ?>

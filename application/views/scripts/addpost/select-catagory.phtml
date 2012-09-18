@@ -1,0 +1,8 @@
+<?php foreach($this->cat as $catagory): ?>
+
+		<a href=<?php echo $this->url(array(
+		'controller'=>'addpost',
+		'action'=>'add',
+		'cat'=> $catagory['CategoryName'])); ?> ><?php echo  $catagory['CategoryName']?></a>
+		
+	<?php   endforeach;?>
