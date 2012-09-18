@@ -31,6 +31,8 @@
           <actionMethod actionName="add"/>
           <actionMethod actionName="selectCatagory"/>
           <actionMethod actionName="fashion"/>
+          <actionMethod actionName="motors"/>
+          <actionMethod actionName="homeAndDecoration"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -112,6 +114,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Addpost">
             <viewScriptFile forActionName="fashion"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Addpost">
+            <viewScriptFile forActionName="motors"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Addpost">
+            <viewScriptFile forActionName="homeAndDecoration"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
