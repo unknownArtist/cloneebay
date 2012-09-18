@@ -142,6 +142,7 @@ class Application_Form_Sports extends Zend_Form
     		$upc,
     		$type,
     		$brand,
+    		$model,
     		$desc,
     		$auctionOrFixed,
     		$startPrice,
