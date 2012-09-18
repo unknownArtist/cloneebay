@@ -28,7 +28,7 @@ class AddpostController extends Zend_Controller_Action
           $this->electronicsAction();
        }
        elseif ($categories == 'Collectable & Art') {
-           # code...
+           $this->collectableArtAction();
        }
        elseif ($categories == 'Home, Outdoors & Decor') {
              $this->homeAndDecorationAction();
@@ -78,6 +78,7 @@ class AddpostController extends Zend_Controller_Action
                 }
             
     
+    
     }
   }
 
@@ -85,14 +86,55 @@ class AddpostController extends Zend_Controller_Action
     {
         $form = new Application_Form_Motors();
         $this->view->form = $form;
+
+         if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                   $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            
+    
+    
+    }
     }
 
     public function homeAndDecorationAction()
     {
         $form = new Application_Form_HomeDecoration();
         $this->view->form = $form;
+        if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                   $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            
+    
+    
     }
-    ////
+    }
+
     public function electronicsAction()
     {
         $form = new Application_Form_Electronics();
@@ -114,11 +156,11 @@ class AddpostController extends Zend_Controller_Action
                 else{
                     echo "not added";
                 }
-            }
+            
     }
+  }
 
-    ////
-        public function cdmediaAction()
+    public function cdmediaAction()
     {
         $form = new Application_Form_CdMedia();
         $this->view->form = $form;
@@ -139,15 +181,40 @@ class AddpostController extends Zend_Controller_Action
                 else{
                     echo "not added";
                 }
-            }
+            
     }
-    ////
+  } 
+
     public function sportsAction()
     {
         $form = new Application_Form_Sports();
         $this->view->form = $form;
 
          if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                  $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            
+    }
+  }
+
+    public function collectableArtAction()
+    {
+        $form = new Application_Form_CollectableArt();
+        $this->view->form = $form;
+        if ($this->getRequest()->isPost()) 
             {
             
             $formData = $this->getRequest()->getPost();
@@ -163,11 +230,16 @@ class AddpostController extends Zend_Controller_Action
                 else{
                     echo "not added";
                 }
-            }
+            
+    
+    
+    }
     }
 
 
 }
+
+
 
 
 
