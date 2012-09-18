@@ -79,7 +79,7 @@ class Application_Form_Motors extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -102,7 +102,7 @@ class Application_Form_Motors extends Zend_Form
 
         $driveType = new Zend_Form_Element_Text('driveType');
         $driveType->setRequired(TRUE)
-                  ->setLabel('Make')
+                  ->setLabel('driveType')
                   ->addFilter('StripTags')
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 

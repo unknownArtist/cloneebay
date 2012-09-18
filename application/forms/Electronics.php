@@ -132,7 +132,7 @@ class Application_Form_Electronics extends Zend_Form
     $pic->setLabel('Select the file to upload:')
                       ->setDestination(APPLICATION_PATH.'/../public/images')
                       ->addValidator('Count', false, 1) // ensure only 1 file
-                      ->addValidator('Size', false, 102400) // limit to 1MB
+                      ->addValidator('Size', false, 409600) // limit to 4MB
                       ->addValidator('Extension', false, 'jpg,jpeg,png,gif');
                   
 
