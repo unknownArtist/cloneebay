@@ -25,7 +25,7 @@ class AddpostController extends Zend_Controller_Action
            echo "its Motors";
        }
        elseif ($categories == 'Electronics') {
-           # code...
+          $this->electronicsAction();
        }
        elseif ($categories == 'Collectable & Art') {
            # code...
@@ -34,13 +34,13 @@ class AddpostController extends Zend_Controller_Action
            # code...
        }
        elseif ($categories == 'CD & Media') {
-           # code...
+          $this->cdmediaAction();
        }
        elseif ($categories == 'Entertainment') {
            # code...
        }
        elseif ($categories == 'Sports Goods') {
-           # code...
+          $this->sportsAction();
        } 
        else
        {
@@ -58,6 +58,79 @@ class AddpostController extends Zend_Controller_Action
     public function fashionAction()
     {
         $form = new Application_Form_Fashion();
+        $this->view->form = $form;
+
+         if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                   $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            }
+    }
+    ////
+    public function electronicsAction()
+    {
+        $form = new Application_Form_Electronics();
+        $this->view->form = $form;
+
+         if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                   $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            }
+    }
+
+    ////
+        public function cdmediaAction()
+    {
+        $form = new Application_Form_CdMedia();
+        $this->view->form = $form;
+
+         if ($this->getRequest()->isPost()) 
+            {
+            
+            $formData = $this->getRequest()->getPost();
+            
+
+            if ($form->isValid($formData)) 
+                {
+                   $products = new Application_Model_Products();
+                   $products->insert($form->getValues());
+                   echo "values added";
+                   $form->reset();
+                }
+                else{
+                    echo "not added";
+                }
+            }
+    }
+    ////
+    public function sportsAction()
+    {
+        $form = new Application_Form_Sports();
         $this->view->form = $form;
 
          if ($this->getRequest()->isPost()) 
