@@ -9,70 +9,51 @@
 </div>                                                      
 
 <?php foreach ($this->pitemDetail as $piDetail): ?>
-		<?php $itemid = $piDetail['id']; ?><br />
-		<?php echo $piDetail['id']; ?><br />
- 		<?php echo $piDetail['title']; ?><br />
- 		<?php echo $piDetail['condition']; ?><br />
- 		<?php echo $piDetail['countries']; ?><br />
- 		<?php echo $piDetail['subtitle']; ?><br />
- 		<?php echo $piDetail['SaleType']; ?><br />
- 		<?php echo $piDetail['PropertyType']; ?><br />
- 		<?php echo $piDetail['ZipPostalCode']; ?><br />
- 		<?php echo $piDetail['StateProvince']; ?><br />
- 		<?php echo $piDetail['genre']; ?><br />
- 		<?php echo $piDetail['desc']; ?><br />
+  <?php $itemid = $piDetail['id']; ?><br />
+  <?php echo $piDetail['id']; ?><br />
+   <?php echo $piDetail['title']; ?><br />
+   <?php echo $piDetail['condition']; ?><br />
+   <?php echo $piDetail['countries']; ?><br />
+   <?php echo $piDetail['subtitle']; ?><br />
+   <?php echo $piDetail['SaleType']; ?><br />
+   <?php echo $piDetail['PropertyType']; ?><br />
+   <?php echo $piDetail['ZipPostalCode']; ?><br />
+   <?php echo $piDetail['StateProvince']; ?><br />
+   <?php echo $piDetail['genre']; ?><br />
+   <?php echo $piDetail['desc']; ?><br />
 
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
- 	<a href='/bids/index/itemID/<?php echo $piDetail["id"];?>'>Bid Now</a>
+  <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>'>Bid Now</a>
 <?php endif; ?>
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
 
-<<<<<<< HEAD
-	<?php $itemid = $this->piDetail['id'];?>
-		
-=======
->>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
-		<?php if(isset($_SESSION['cart'])): ?>
+  <?php if(isset($_SESSION['cart'])): ?>
 
-		   <?php foreach ($_SESSION['cart'] as $item): ?>
-		   		<?php if($item == $piDetail['id']) {?>
-		   			<?php $key = '0' ?>
-		   			
-		   		<?php } //endif; ?>
-		   <?php endforeach; ?>
+     <?php foreach ($_SESSION['cart'] as $item): ?>
+       <?php if($item == $piDetail['id']) {?>
+        <?php $key = '0' ?>
+        
+       <?php } //endif; ?>
+     <?php endforeach; ?>
 
-  			<?php if($key == '0') {?>
-					<a>Item already added to your cart</a>		
-				<?php } //endif; ?>	    
+     <?php if($key == '0') {?>
+     <a>Item already added to your cart</a>  
+    <?php } //endif; ?>     
 
-<<<<<<< HEAD
-					<?php if($key== " "):?>
-					  	<a id="addToCart" href="<?php echo $this->Url(
-=======
-			<?php if($key != '0') { ?>			
- 					<a id="addToCart" href="<?php echo $this->Url(
->>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
-					                            array(
-					                            'controller' =>  'items',
-					                            'action'     =>  'addtocart',
-					                            'id'         =>   $piDetail['id'],
-<<<<<<< HEAD
-					                            )); ?>">Add to Cart</a>
-					    <?php endif; ?> 
-
-						<?php if($key!=" "):?>
-							<a>Item already added to your cart</a>
-							<?php endif; ?>
-=======
-					                            )); ?>">Add to Cart</a>  	
-					<?php }//endif; ?> 				
->>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
-	                    
-	    <?php endif; ?>
+   <?php if($key != '0') { ?>   
+      <a id="addToCart" href="<?php echo $this->Url(
+                                 array(
+                                 'controller' =>  'items',
+                                 'action'     =>  'addtocart',
+                                 'id'         =>   $piDetail['id'],
+                                 )); ?>">Add to Cart</a>   
+     <?php }//endif; ?>     
+                     
+     <?php endif; ?>
 
          <?php if(!isset($_SESSION['cart'])): ?>
-       		  	<a id="addToCart" href="<?php echo $this->Url(
+            <a id="addToCart" href="<?php echo $this->Url(
                             array(
                             'controller' =>  'items',
                             'action'     =>  'addtocart',
@@ -85,7 +66,7 @@
 <?php endif; ?>
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
-	 <a href="#">Buy Now</a>
+  <a href="#">Buy Now</a>
 <?php endif; ?>
 
 
@@ -262,5 +243,3 @@
 <h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
 
 </div>
-
-
