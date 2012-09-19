@@ -26,22 +26,22 @@
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
 
-	<?php $itemid = $this->pitemDetail['id'];?>
-
+	<?php $itemid = $this->piDetail['id'];?>
+		
 		<?php if(isset($_SESSION['cart'])): ?>
 
 	            		<?php $key = array_search($itemid, $_SESSION['cart']); // $key = 2;?>
 
-<!-- 						<?php if($key!= null):?>
+					<?php if($key== " "):?>
 					  	<a id="addToCart" href="<?php echo $this->Url(
 					                            array(
 					                            'controller' =>  'items',
 					                            'action'     =>  'addtocart',
 					                            'id'         =>   $piDetail['id'],
 					                            )); ?>">Add to Cart</a>
-					    <?php endif; ?> -->
+					    <?php endif; ?> 
 
-						<?php if($key==null):?>
+						<?php if($key!=" "):?>
 							<a>Item already added to your cart</a>
 							<?php endif; ?>
 	                    

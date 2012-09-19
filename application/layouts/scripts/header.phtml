@@ -51,9 +51,9 @@
 <li><a href="/user/sign-in">Sign In</a></li>
 <?php } ?>
 <li><a href="#">Join Now</a></li>
-
-<li><a href="#">Cart(<?php echo count($_SESSION['cart']);?>)</a></li>
-
+<?php if(isset($_SESSION['cart'])): ?>
+<li><a href="#">Cart(<?php echo count($_SESSION["cart"]);?>)</a></li>
+<?php endif; ?>
 <li>  	<a id="addToCart" href="<?php echo $this->Url(
                             array(
                             'controller' =>  'items',
