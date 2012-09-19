@@ -76,7 +76,7 @@ class AddpostController extends Zend_Controller_Action
                    echo Zend_Auth::getInstance()->getIdentity()->id;
                    die();
                    $data = $form->getValues();
-                   array_push($data['user_id'], );
+                   array_push($data['user_id'] );
                    print_r($data);
                    die();
                    $products->insert($data);
