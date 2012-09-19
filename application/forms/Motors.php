@@ -102,7 +102,7 @@ class Application_Form_Motors extends Zend_Form
 
         $driveType = new Zend_Form_Element_Text('driveType');
         $driveType->setRequired(TRUE)
-                  ->setLabel('Make')
+                  ->setLabel('driveType')
                   ->addFilter('StripTags')
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
