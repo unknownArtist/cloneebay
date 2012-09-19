@@ -68,12 +68,10 @@ class ItemsController extends Zend_Controller_Action
 
     public function checkoutAction()
     {
-        // echo "checkout.....";
-        // die();
 
-        // $products = new Application_Model_Products();
-        // $where = "id = '$id'";
-        // $this->view->pitemDetail = $products->fetchAll($where)->toArray();
+        //session_destroy();
+        session_unset();
+
 
     }
 

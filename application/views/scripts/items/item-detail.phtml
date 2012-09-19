@@ -28,20 +28,35 @@
 
 	<?php $itemid = $this->pitemDetail['id'];?>
 
-	<?php $key = array_search($itemid, $_SESSION['cart']); // $key = 2;?>
+		<?php if(isset($_SESSION['cart'])): ?>
 
-	<?php if($key!= null):?>
-  	<a id="addToCart" href="<?php echo $this->Url(
+	            		<?php $key = array_search($itemid, $_SESSION['cart']); // $key = 2;?>
+
+<!-- 						<?php if($key!= null):?>
+					  	<a id="addToCart" href="<?php echo $this->Url(
+					                            array(
+					                            'controller' =>  'items',
+					                            'action'     =>  'addtocart',
+					                            'id'         =>   $piDetail['id'],
+					                            )); ?>">Add to Cart</a>
+					    <?php endif; ?> -->
+
+						<?php if($key==null):?>
+							<a>Item already added to your cart</a>
+							<?php endif; ?>
+	                    
+	    <?php endif; ?>
+
+       <?php if(!isset($_SESSION['cart'])): ?>
+       		  	<a id="addToCart" href="<?php echo $this->Url(
                             array(
                             'controller' =>  'items',
                             'action'     =>  'addtocart',
                             'id'         =>   $piDetail['id'],
                             )); ?>">Add to Cart</a>
-    <?php endif; ?>
+         <?php endif; ?>
 
-	<?php if($key==null):?>
-		<a>Item already added to your cart</a>
-		<?php endif; ?>
+
 
 <?php endif; ?>
 
