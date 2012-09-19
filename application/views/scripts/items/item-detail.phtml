@@ -9,6 +9,8 @@
 </div>                                                      
 
 <?php foreach ($this->pitemDetail as $piDetail): ?>
+		<?php $itemid = $piDetail['id']; ?><br />
+		<?php echo $piDetail['id']; ?><br />
  		<?php echo $piDetail['title']; ?><br />
  		<?php echo $piDetail['condition']; ?><br />
  		<?php echo $piDetail['countries']; ?><br />
@@ -26,28 +28,50 @@
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
 
+<<<<<<< HEAD
 	<?php $itemid = $this->piDetail['id'];?>
 		
+=======
+>>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
 		<?php if(isset($_SESSION['cart'])): ?>
 
-	            		<?php $key = array_search($itemid, $_SESSION['cart']); // $key = 2;?>
+		   <?php foreach ($_SESSION['cart'] as $item): ?>
+		   		<?php if($item == $piDetail['id']) {?>
+		   			<?php $key = '0' ?>
+		   			
+		   		<?php } //endif; ?>
+		   <?php endforeach; ?>
 
+  			<?php if($key == '0') {?>
+					<a>Item already added to your cart</a>		
+				<?php } //endif; ?>	    
+
+<<<<<<< HEAD
 					<?php if($key== " "):?>
 					  	<a id="addToCart" href="<?php echo $this->Url(
+=======
+			<?php if($key != '0') { ?>			
+ 					<a id="addToCart" href="<?php echo $this->Url(
+>>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
 					                            array(
 					                            'controller' =>  'items',
 					                            'action'     =>  'addtocart',
 					                            'id'         =>   $piDetail['id'],
+<<<<<<< HEAD
 					                            )); ?>">Add to Cart</a>
 					    <?php endif; ?> 
 
 						<?php if($key!=" "):?>
 							<a>Item already added to your cart</a>
 							<?php endif; ?>
+=======
+					                            )); ?>">Add to Cart</a>  	
+					<?php }//endif; ?> 				
+>>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
 	                    
 	    <?php endif; ?>
 
-       <?php if(!isset($_SESSION['cart'])): ?>
+         <?php if(!isset($_SESSION['cart'])): ?>
        		  	<a id="addToCart" href="<?php echo $this->Url(
                             array(
                             'controller' =>  'items',
