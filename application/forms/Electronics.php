@@ -17,8 +17,7 @@ class Application_Form_Electronics extends Zend_Form
 
         $category = new Zend_Form_Element_Hidden('category');
         $category->setRequired(TRUE)
-                  
-                  ->setValue($_SESSION)
+                ->setValue($_SESSION)
                   ->addFilter('StripTags')
                   ->addFilter('StringTrim');
                   $this->addElement($category);
@@ -132,7 +131,7 @@ class Application_Form_Electronics extends Zend_Form
     $pic->setLabel('Select the file to upload:')
                       ->setDestination(APPLICATION_PATH.'/../public/images')
                       ->addValidator('Count', false, 1) // ensure only 1 file
-                      ->addValidator('Size', false, 102400) // limit to 1MB
+                      ->addValidator('Size', false, 402400) // limit to 1MB
                       ->addValidator('Extension', false, 'jpg,jpeg,png,gif');
                   
 

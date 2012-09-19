@@ -2,11 +2,19 @@
 <h2>Welcome to home</h2>
 <?php endif; ?>
 
-<div id="slider">                                                   <!--slider-->
+<div>
+<?php 
+     
+?>   
+</div>                                                      
 
-</div>                                                              <!--slider-->
+<?php foreach ($this->pitems as $pitem): ?>
+ <a href=<?php echo $this->url(array(
+		'controller'=>'items',
+		'action'=>'item-detail',
+		'id'=> $pitem['id'])); ?> ><?php echo  $pitem['title']?></a>
 
-
+  <?php endforeach; ?>
 
 <div id="categories">                                               <!--categories-->
 

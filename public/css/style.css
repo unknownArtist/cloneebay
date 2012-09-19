@@ -1,1356 +1,2712 @@
-@charset "utf-8";
-/* CSS Document */
-
-body
-{
-margin:0;
-padding:0;
-font-family:"Century Gothic";
-font-size:14px;
-line-height:normal;
-text-align:justify;
-color:#000000;
-background-image: url(images/bg2.png);
-
-
-}
-
-#container
-{
-width:1200px;
-height:auto;
-
-padding:0;
-
-background-image:url(images/bg.png);
-background-repeat:no-repeat;
-margin: 0 auto;
-min-height:1310px;
-
-
-}
-
-#header
-{
-
-margin:0;
-padding:0;
-float:left;
-height:164px;
-width:100%;
-}
-
-.logo
-{
-background-image:url(images/logo.png);
-background-repeat:no-repeat;
-height: 84px;
-width: 271px;
-padding: 0;
-float:left;
-margin: 8px 0px 16px 115px;
-}
-
-.logo a
-{
-text-decoration:none;
-}
-
-.fblike
-{
-background-image:url(images/fblike.png);
-background-repeat:no-repeat;
-width: 69px;
-height:20px;
-float:right;
-margin: 8px 120px 0px 625px;
-}
-
-.fblike:hover
-{
-background-image:url(images/fblike2.png);
-background-repeat:no-repeat;
-width: 69px;
-height:20px;
-float:right;
-}
-
-
-.menu
-{
-float:right;
-margin:32px 114px 2px 0px;
-height:30px;
-}
-
-.menu ul
-{
-margin:auto;
-text-decoration:none;
-float: left;
-height:30px;
-font-size:15px;
-font-family:"Century Gothic";
-
-}
-
-.menu li
-{
-list-style:none;
-float:left;
-background-image:url(images/separator.png);
-background-repeat:no-repeat;
-height:24px;
-width:auto;
-padding-left: 10px;
-padding-top:2px;
-padding-right:5px;
-font-size:15px;
-font-family:"Century Gothic";
-}
-
-.menu li:first-child
-{
-list-style:none;
-float:left;
-height:24px;
-width:auto;
-padding-left:8px;
-padding-top:2px;
-font-size:15px;
-font-family:"Century Gothic";
-background-image:url(images/list1.png);
-background-repeat:no-repeat;
-}
-
-.menu li:last-child
-{
-list-style:none;
-float:left;
-height:24px;
-width:auto;
-padding-left:35px;
-padding-top:2px;
-font-size:15px;
-font-family:"Century Gothic";
-background-image:url(images/cart.png);
-background-repeat:no-repeat;
-}
-
-
-.menu li a
-{
-text-decoration:none;
-color:#0066CC;
-float:right;
-font-size:15px;
-font-family:"Century Gothic";
-}
-
-
-.menu li a:hover
-{
-text-decoration:none;
-color:#000000;
-float:left;
-font-size:15px;
-font-family:"Century Gothic";
-}
-
-#search
-{
-background-image:url(images/searchbg.png);
-background-repeat:repeat-x;
-height: 56px;
-float:left;
-width:100%;
-}
-
-.searchbg
-{
-background-image:url(images/search.png);
-background-repeat:no-repeat;
-margin: 7px 0px 0px 115px;
-padding:0;
-width:665px;
-height:46px;
-float:left;
-}
-
-input.rounded {
-border: 1px solid #3e5397;
- -moz-border-radius: 10px;
- -webkit-border-radius: 10px;
-border-radius: 5px;
- -moz-box-shadow: 2px 2px 3px #666;
- -webkit-box-shadow: 2px 2px 3px #3e5397;
-box-shadow: 2px 2px 3px #3e5397;
-font-size: 15px;
-outline: 0;
- -webkit-appearance: none;
- height:24px;
- width:228px;
- font-family:"Century Gothic";
- color:#cccdcd;
- margin:7px 0px 0px 18px;
- padding-left:10px;
- float:left;
-
-}
-
-input.rounded:focus {
-border-color: #339933;
-}
-
-select.rounded {
-border: 1px solid #3e5397;
- -moz-border-radius: 10px;
- -webkit-border-radius: 10px;
-border-radius: 5px;
- -moz-box-shadow: 2px 2px 3px #666;
- -webkit-box-shadow: 2px 2px 3px #3e5397;
-box-shadow: 2px 2px 3px #3e5397;
-font-size: 15px;
-outline: 0;
- -webkit-appearance: none;
- height:28px;
- width:240px;
- font-family:"Century Gothic";
- color:#cccdcd;
- margin:7px 0px 0px 9px;
- padding-left:10px;
- float:left;
-}
-
-.button
-{
-background-image:url(images/button.png);
-background-repeat:no-repeat;
-float:left;
-height:24px;
-width:137px;
-margin:10px 0px 0px 9px;
-
-}
-
-.button:hover
-{
-background-image:url(images/button2.png);
-background-repeat:no-repeat;
-color:#000000;
-}
-
-h1
-{
-font-family:"Century Gothic";
-font-size:15px;
-color:#0066CC;
-float:left;
-margin:20px 0px 0px 30px;
-}
-
-h1:hover
-{
-font-family:"Century Gothic";
-font-size:15px;
-color:#000000;
-float:left;
-}
-
-#slider
-{
-background-image:url(images/slides.png);
-background-repeat:no-repeat;
-float:left;
-width:754px;
-height:261px;
-margin: 20px 0px 0px 110px;
-padding:0;
-
-}
-
-#categories
-{
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-border:1px solid #bdbdbd;
-float:right;
-height:auto;
-width:215px;
-margin:25px 110px 0px 0px;
-}
-
-#categories ul
-{
-margin: 0 auto;
-padding:0;
-text-decoration:none;
-float:left;
-font-family:"Century Gothic";
-font-size:15px;
-}
-
-#categories li
-{
-background-image:url(images/listarrow.png);
-background-position:left;
-height:26px;
-width:auto;
-background-repeat:no-repeat;
-list-style:none;
-border-bottom:1px solid #d1d1d1;
-color:#808080;
-font-family:"Century Gothic";
-font-size:15px;
-margin:0px 5px 0px 5px;
-padding:5px 0px 0px 20px;
-
-}
-
-#categories li a
-{
-text-decoration:none;
-list-style:none;
-font-family:"Century Gothic";
-font-size:15px;
-color:#808080;
-width:auto;
-
-}
-
-#categories li:last-child
-{
-border:none;
-}
-
-#categories li a:hover
-{
-color:#000000;
-font-family:"Century Gothic";
-font-size:15px;
-
-}
-
-#content
-{
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-height:auto;
-width: 725px;
-min-height:100px;
-float:left;
-margin: 15px 0px 0px 115px;
-padding:5px 10px 10px 10px;
-
-}
-
-h2
-{
-font-family:"Century Gothic";
-font-size:17px;
-color:#0066CC;
-float:left;
-margin:5px 0px 5px 17px;
-width:375px;
-text-transform:uppercase;
-}
-
-p
-{
-font-family:Arial;
-font-size:17px;
-color:#000000;
-float:left;
-margin:15px 5px 15px 5px;
-width:auto;
-text-align:justify;
-}
-
-.signin
-{
-background-image:url(images/contentbg2.png);
-background-repeat:repeat;
-height:auto;
-width:350px;
-min-height:100px;
-float:left;
-}
-
-.signin_button
-{
-background-image:url(images/signin.png);
-background-repeat:no-repeat;
-float:right;
-height:23px;
-width:137px;
-margin: 0px 15px 25px 0px;
-}
-
-.signin_button:hover
-{
-background-image:url(images/signin2.png);
-background-repeat:no-repeat;
-float:right;
-height:23px;
-width:137px;
-}
-
-h3
-{
-font-family:Arial;
-font-size:17px;
-color:#aeaeae;
-float:left;
-margin:5px 0px 0px 5px;
-width:100%;
-font-style:italic;
-}
-
-.register_button
-{
-background-image:url(images/register.png);
-background-repeat:no-repeat;
-float:right;
-height:23px;
-width:137px;
-margin: 0px 15px 10px 0px;
-
-}
-
-.register_button:hover
-{
-background-image:url(images/register2.png);
-background-repeat:no-repeat;
-float:right;
-height:23px;
-width:137px;
-
-}
-
-.works
-{
-background-image:url(images/contentbg2.png);
-background-repeat:repeat;
-height:auto;
-width:350px;
-min-height:100px;
-float:right;
-margin:0 auto;
-}
-
-h4
-{
-font-family:"Century Gothic";
-font-size:17px;
-color:#0066CC;
-float:none;
-margin:5px 0px 5px 17px;
-width:100%;
-text-transform:uppercase;
-}
-
-.works a
-{
-text-decoration:none;
-color:#7185bd;
-float:right;
-margin:0px 10px 10px 0px;
-font-family:Arial;
-font-size:17px;
-}
-
-.works a:hover
-{
-text-decoration:none;
-color:#000000;
-font-family:Arial;
-font-size:17px;
-}
-
-#featured
-{
-height:auto;
-width:auto;
-float:right;
-margin:-15px 110px 0px 0px;
-}
-
-#featured h5
-{
-background-image:url(images/fheadbg.png);
-background-repeat:no-repeat;
-height:27px;
-width:213px;
-text-align:left;
-padding-top:3px;
-font-size:16px;
-font-family:"Century Gothic";
-color:#0066CC;
-}
-
-#featured .video
-{
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-width: 170px;
-height:215px;
-margin:-10px auto;
-border:4px solid #ffffff;
-
-}
-
-#featured .videoimg
-{
-background-image:url(images/vimg.png);
-background-repeat:no-repeat;
-width: 170px;
-height:215px;
-float:left;
-}
-
-#featured .video h6
-{
-background-image:url(images/vtitle.png);
-background-repeat:repeat-x;
-width:auto;
-text-align:center;
-font-size:14px;
-font-weight:bold;
-font-family:"Century Gothic";
-color:#ffffff;
-margin:140px auto;
-}
-
-
-
-
-
-#featured_slider
-{
-background-image:url(images/featured.png);
-background-repeat:no-repeat;
-background-position:center;
-margin:10px 0px 0px 120px;
-height:240px;
-width:961px;
-float:left;
-}
-
-#featured_slider h7
-{
-font-family:"Century Gothic";
-font-size:18px;
-width:100%;
-color:#0066CC;
-text-align:center;
-margin:10px auto;
-text-transform:uppercase;
-float:left;
-}
-#featured_slider h22
-{
-font-family:"Century Gothic";
-font-size:18px;
-width:100%;
-color:#0066CC;
-text-align:left;
-margin:10px auto;
-text-transform:uppercase;
-padding-left:10px;
-float:left;
-}
-
-#fslider
-{
-height:200px;
-width:810px;
-float:left;
-margin: 0px 0px 0px 0px;
-}
-
-.col2
-{
-height:155px;
-width:155px;
-float:left;
-margin: 0 auto;
-margin-left:7px;
-
-}
-
-#arrow
-{
-width:70px;
-height:155px;
-}
-
-.arrowl
-{
-background-image:url(images/arrowl.png);
-background-repeat:no-repeat;
-background-position:center;
-width:15px;
-height:18px;
-float:left;
-}
-
-.arrowr
-{
-background-image:url(images/arrowr.png);
-background-repeat:no-repeat;
-background-position:center;
-width:15px;
-height:18px;
-float:right;
-}
-
-.fimage
-{
-height:155px;
-width:155px;
-border:1px solid #e0e0e0;
-/*background-image:url(images/featuredimg.png);
-background-repeat:no-repeat;		used for test*/
-}
-
-
-
-.ftext1
-{
-font-family:"Century Gothic";
-font-size:13px;
-color:#9d9d9d;
-padding-left:2px;
-}
-
-span
-{
-font-family:"Century Gothic";
-font-size:13px;
-color:#0066CC;
-}
-
-.social
-{
-float:left;
-margin: 10px 0px 0px 120px;
-width: 970px;
-}
-.social h8
-{
-font-family:"Century Gothic";
-font-size:16px;
-color:#0066CC;
-padding-left:2px;
-border-top:1px solid #ecf0f4;
-width:100%;
-float:left;
-text-align:center;
-padding-top:10px;
-}
-
-.social a
-{
-font-family:"Century Gothic";
-font-size:16px;
-color:#9d9d9d;
-text-decoration:none;
-padding-left:5px;
-}
-
-
-#footer
-{
-border: 1px solid #eaeaea;
-min-height:200px;
-width:960px;
-float:left;
-margin:10px 0px 0px 120px;
-}
-
-#social
-{
-width:430px;
-height:200px;
-margin:0 auto;
-float:left;
-
-}
-
-
-h9
-{
-color:#ababab;
-font-family:"Century Gothic";
-font-size:10px;
-float:left;
-margin:30px 0px 0px 20px;
-text-transform:uppercase;
-width:100%;
-}
-
-.icon
-{
-width:100px;
-}
-
-#social .facebook
-{
-
-background-image:url(images/facebook.png);
-background-repeat:no-repeat;
-height:20px;
-width:20px;
-margin-top:10px;
-padding:3px;
-margin-left:30px;
-float:left;
-}
-
-#social .twitter
-{
-
-background-image:url(images/twitter.png);
-background-repeat:no-repeat;
-height:20px;
-width:20px;
-padding:3px;
-margin-left:30px;
-float:left;
-}
-
-#social .email
-{
-
-background-image:url(images/email.png);
-background-repeat:no-repeat;
-height:20px;
-width:20px;
-padding:3px;
-margin-left:30px;
-float:left;
-}
-
-#social .pintrest
-{
-
-background-image:url(images/pintrest.png);
-background-repeat:no-repeat;
-height:20px;
-width:20px;
-margin-left:30px;
-padding:3px;
-float:left;
-}
-
-#fcol2
-{
-width:175px;
-height:200px;
-float:left;
-list-style:none;
-}
-
-#fcol3
-{
-width:175px;
-height:200px;
-float:left;
-list-style:none;
-}
-
-#fcol4
-{
-width:175px;
-height:200px;
-float:left;
-list-style:none;
-}
-
-
-#footer ul
-{
-text-decoration:none;
-height:180px;
-text-align:left;
-margin-top:50px;
-padding:0px 0px 0px 20px;
-}
-
-#footer li
-{
-margin-top:5px;
-list-style:none;
-font-family:"Century Gothic";
-font-size:10px;
-
-}
-
-#footer li a:hover
-{
-list-style:none;
-font-family:"Century Gothic";
-font-size:10px;
-color:#000000;
-
-}
-
-#footer li a
-{ 
-list-style:none;
-text-decoration:none;
-color:#0066CC;
-}
-
-
-#footer li:last-child
-{ 
-list-style:none;
-text-decoration:none;
-margin-top:15px;
-color:#585858;
-}
-
-.flogo
-{
-background-image:url(images/footerlogo.png);
-background-repeat:no-repeat;
-height:29px;
-width:88px;
-float:left;
-margin:1px 0px 0px 20px;
-}
-
-.rights
-{
-float:right;
-margin:0px 20px 0px 0px;
-}
-
-.rights p
-{
-float:right;
-font-family:"Century Gothic";
-font-size:13px;
-color:#dfdfdf;
-}
-
-.rights a
-{
-font-family:"Century Gothic";
-font-size:13px;
-color:#0066CC;
-text-decoration:none;
-}
-
-.rights a:hover
-{
-font-family:"Century Gothic";
-font-size:13px;
-color:#000000;
-text-decoration:none;
-}
-
-
-
-h10
-{
-font-family:"Century Gothic";
-font-size:24px;
-float:left;
-color:#0066CC;
-margin:25px 0px 0px 115px;
-}
-
-#signin
-{
-height: 725px;
-width: 100%;
-margin:110px auto 0px auto;
-float:left;
-}
-
-#signinbg
-{
-
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-height:auto;
-width: 700px;
-min-height:100px;
-float:left;
-margin: 70px 0px 0px 200px;
-padding:5px 10px 10px 10px;
-
-}
-
-h11
-{
-font-family:Arial;
-font-size:15px;
-color:#000000;
-float:left;
-margin:5px 0px 5px 17px;
-width:375px;
-}
-
-h12
-{
-font-family:Arial;
-font-size:17px;
-color:#8b8b8b;
-float:left;
-text-align:right;
-
-}
-
-h13
-{
-font-family:Arial;
-font-size:17px;
-color:#8b8b8b;
-float:left;
-text-align:right;
-
-}
-
-
-input
-{
-float:left;
-
-width:90%;
-}
-
-.sin_button
-{
-background-image: url(images/signin.png);
-background-repeat: no-repeat;
-float: left;
-height: 23px;
-width: 137px;
-margin: 10px 0px 20px 105px;
-}
-
-.sin_button:hover
-{
-background-image:url(images/signin2.png);
-background-repeat:no-repeat;
-float:left;
-height:23px;
-width:137px;
-}
-
-.regis_button
-{
-background-image:url(images/register.png);
-background-repeat:no-repeat;
-float:left;
-height:23px;
-width:137px;
-margin:10px 0px 20px 105px;
-
-}
-
-.regis_button:hover
-{
-background-image:url(images/register2.png);
-background-repeat:no-repeat;
-float:left;
-height:23px;
-width:137px;
-
-
-}
-
-.banner
-{
-background-image:url(images/banner.jpg);
-background-repeat:no-repeat;
-background-position:center;
-height:232px;
-width:327px;
-float:right;
-}
-
-.register
-{
-height:auto;
-min-height:800px;
-margin: 20px 0px 0px 115px;
-float:left;
-}
-
-.register p1
-{
-font-family:Arial;
-font-size:15px;
-color:#8b8b8b;
-float:left;
-width:100%;
-}
-
-.register a
-{
-font-family:Arial;
-font-size:15px;
-color:#990000;
-}
-
-.register h14
-{
-font-family:Arial;
-font-size:15px;
-color:#000000;
-float:left;
-margin-top:5px;
-margin-bottom:10px;
-width:100%;
-}
-
-
-.register span
-{
-font-family:Arial;
-font-size:10px;
-color:#000000;
-}
-
-.register p2
-{
-font-family:Arial;
-font-size:15px;
-color:#8b8b8b;
-float:left;
-margin-top:15px;
-}
-
-#product
-{
-height: auto;
-width: 700px;
-min-height: 100px;
-float: left;
-margin: 15px 0px 0px 105px;
-padding: 5px 0px 10px 10px;
-
-
-}
-
-.productimg
-{
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-border:1px solid #bebebe;
-min-height:280px;
-min-width:280px;
-float:left;
-}
-
-.productviews
-{
-height:auto;
-width:auto;
-float:left;
-margin-left: -30px;
-margin-top: 158px;
-}
-
-.productviews li
-{
-background-image:url(images/Productviewbg.png);
-background-repeat:no-repeat;
-height:50px;
-width:40px;
-list-style:none;
-margin-top:5px;
-}
-.productviews ul
-{
-height:100px;
-width:50px;
-float:left;
-list-style:none;
-}
-
-.productdesc
-{
-width:350px;
-height:280px;
-float:left;
-}
-
-.productdesc h15
-{
-font-family:"Century Gothic";
-font-size:17px;
-color:#748edc;
-float:left;
-margin:2px 0px 2px 5px;
-width:100%;
-}
-
-.productdesc h16
-{
-font-family:"Century Gothic";
-font-size:17px;
-color:#000000;
-float:left;
-width:100%;
-margin:0px 0px 2px 5px;
-}
-
-.star
-{
-background-image:url(images/star.png);
-height: 16px;
-width:108px;
-float:left;
-margin:3px 0px 0px 5px;
-}
-
-.productdesc h17
-{
-font-family:Arial;
-font-size:17px;
-color:#7e7e7e;
-float:left;
-width:100%;
-margin:10px 0px 0px 5px;
-}
-
-.productdesc span
-{
-font-family:Arial;
-font-size:17px;
-color:#990000;
-width:100%;
-margin:0px 0px 2px 5px;
-}
-
-.productdesc a
-{
-font-family:Arial;
-font-size:11px;
-color:#748edc;
-width:100%;
-margin:0px 0px 2px 5px;
-float:left;
-text-decoration:none;
-}
-
-#cart
-{
-background-image:url(images/addbg.png);
-background-repeat:repeat;
-border:1px solid #bcc4ca;
-float:right;
-height:auto;
-width:255px;
-min-height:245px;
-margin:25px 110px 0px 0px;
-}
-
-#cart h18
-{
-font-family:"Century Gothic";
-font-size:15px;
-color:#000000;
-float:left;
-margin:20px 0px 2px 65px;
-text-align:center;
-}
-
-#cart .addtocart
-{
-background-image:url(images/addtocart.png);
-background-repeat:no-repeat;
-height:25px;
-width:175px;
-margin:10px 0px 0px 50px;
-float:left;
-}
-
-#cart .addtocart:hover
-{
-background-image:url(images/addtocart2.png);
-background-repeat:no-repeat;
-height:25px;
-width:175px;
-}
-
-#cart a
-{
-font-family: Arial;
-font-size: 11px;
-color: #748EDC;
-margin: 10px 5px 0px 43px;
-float: left;
-text-align: center;
-}
-
-#cart a:hover
-{
-font-family: Arial;
-font-size: 11px;
-color: #000000;
-text-align: center;
-}
-
-
-#cart span
-{
-font-family: Arial;
-font-size: 11px;
-color: #000000;
-float: left;
-text-align: center;
-margin: 10px 5px 0px 0px;
-}
-
-
-#cart h19
-{
-font-family: Arial;
-font-size: 12px;
-color: #848484;
-float: left;
-text-align: center;
-margin: 10px 5px 0px 10px;
-}
-
-
-#cart p
-{
-font-family: Arial;
-font-size: 12px;
-color: #000000;
-float: left;
-text-align: left;
-margin: 5px 10px 0px 10px;
-}
-
-.cart_register
-{
-background-image:url(images/register.png);
-background-repeat:no-repeat;
-float:left;
-height:23px;
-width:137px;
-margin: 15px 0px 10px 57px;
-
-}
-
-.cart_register:hover
-{
-background-image:url(images/register2.png);
-background-repeat:no-repeat;
-float:left;
-height:23px;
-width:137px;
-
-}
-
-#product_specifications
-{
-float:left;
-background-image:url(images/catbg.png);
-background-repeat:repeat;
-border:1px solid #cccccc;
-height:auto;
-width:auto;
-min-height:100px;
-min-width:615px;
-margin: 0px 0px 10px 115px;
-padding: 0px 0px 5px 10px;
-}
-
-
-.product_specifications
-{
-float:left;
-background-image:url(images/contentbg2.png);
-background-repeat:repeat;
-height:auto;
-width:auto;
-min-width:225px;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-}
-
-.product_specifications ul
-{
-float:left;
-height:auto;
-width:auto;
-min-width:225px;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-}
-
-
-.product_specifications li
-{
-height:auto;
-width:auto;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-padding:5px 0px 2px 0px;
-}
-
-#product_specifications h20
-{
-font-family:"Century Gothic";
-font-size:17px;
-color:#748edc;
-float:left;
-margin:2px 0px 3px 5px;
-width:100%;
-}
-
-.product_specifications_values
-{
-float:left;
-height:auto;
-width:auto;
-min-width:225px;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-}
-
-.product_specifications_values ul
-{
-float:left;
-height:auto;
-width:auto;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-}
-
-.product_specifications_values li
-{
-height:auto;
-width:auto;
-list-style:none;
-font-family:Arial;
-font-size:14px;
-padding:5px 0px 2px 0px;
-color:#7e7e7e;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+body
+
+{
+
+margin:0;
+
+padding:0;
+
+font-family:"Century Gothic";
+
+font-size:14px;
+
+line-height:normal;
+
+text-align:justify;
+
+color:#000000;
+
+background-image: url(//images/bg2.png);
+
+
+
+
+
+}
+
+
+
+#container
+
+{
+
+width:1200px;
+
+height:auto;
+
+
+
+padding:0;
+
+
+
+background-image:url(//images/bg.png);
+
+background-repeat:no-repeat;
+
+margin: 0 auto;
+
+min-height:1310px;
+
+
+
+
+
+}
+
+
+
+#header
+
+{
+
+
+
+margin:0;
+
+padding:0;
+
+float:left;
+
+height:164px;
+
+width:100%;
+
+}
+
+
+
+.logo
+
+{
+
+background-image:url(/images/logo.png);
+
+background-repeat:no-repeat;
+
+height: 84px;
+
+width: 271px;
+
+padding: 0;
+
+float:left;
+
+margin: 8px 0px 16px 115px;
+
+}
+
+
+
+.logo a
+
+{
+
+text-decoration:none;
+
+}
+
+
+
+.fblike
+
+{
+
+background-image:url(/images/fblike.png);
+
+background-repeat:no-repeat;
+
+width: 69px;
+
+height:20px;
+
+float:right;
+
+margin: 8px 120px 0px 625px;
+
+}
+
+
+
+.fblike:hover
+
+{
+
+background-image:url(/images/fblike2.png);
+
+background-repeat:no-repeat;
+
+width: 69px;
+
+height:20px;
+
+float:right;
+
+}
+
+
+
+
+
+.menu
+
+{
+
+float:right;
+
+margin:32px 114px 2px 0px;
+
+height:30px;
+
+}
+
+
+
+.menu ul
+
+{
+
+margin:auto;
+
+text-decoration:none;
+
+float: left;
+
+height:30px;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+
+
+}
+
+
+
+.menu li
+
+{
+
+list-style:none;
+
+float:left;
+
+background-image:url(/images/separator.png);
+
+background-repeat:no-repeat;
+
+height:24px;
+
+width:auto;
+
+padding-left: 10px;
+
+padding-top:2px;
+
+padding-right:5px;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+}
+
+
+
+.menu li:first-child
+
+{
+
+list-style:none;
+
+float:left;
+
+height:24px;
+
+width:auto;
+
+padding-left:8px;
+
+padding-top:2px;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+background-image:url(/images/list1.png);
+
+background-repeat:no-repeat;
+
+}
+
+
+
+.menu li:last-child
+
+{
+
+list-style:none;
+
+float:left;
+
+height:24px;
+
+width:auto;
+
+padding-left:35px;
+
+padding-top:2px;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+background-image:url(/images/cart.png);
+
+background-repeat:no-repeat;
+
+}
+
+
+
+
+
+.menu li a
+
+{
+
+text-decoration:none;
+
+color:#0066CC;
+
+float:right;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+}
+
+
+
+
+
+.menu li a:hover
+
+{
+
+text-decoration:none;
+
+color:#000000;
+
+float:left;
+
+font-size:15px;
+
+font-family:"Century Gothic";
+
+}
+
+
+
+#search
+
+{
+
+background-image:url(/images/searchbg.png);
+
+background-repeat:repeat-x;
+
+height: 56px;
+
+float:left;
+
+width:100%;
+
+}
+
+
+
+.searchbg
+
+{
+
+background-image:url(/images/search.png);
+
+background-repeat:no-repeat;
+
+margin: 7px 0px 0px 115px;
+
+padding:0;
+
+width:665px;
+
+height:46px;
+
+float:left;
+
+}
+
+
+
+input.rounded {
+
+border: 1px solid #3e5397;
+
+ -moz-border-radius: 10px;
+
+ -webkit-border-radius: 10px;
+
+border-radius: 5px;
+
+ -moz-box-shadow: 2px 2px 3px #666;
+
+ -webkit-box-shadow: 2px 2px 3px #3e5397;
+
+box-shadow: 2px 2px 3px #3e5397;
+
+font-size: 15px;
+
+outline: 0;
+
+ -webkit-appearance: none;
+
+ height:24px;
+
+ width:228px;
+
+ font-family:"Century Gothic";
+
+ color:#cccdcd;
+
+ margin:7px 0px 0px 18px;
+
+ padding-left:10px;
+
+ float:left;
+
+
+
+}
+
+
+
+input.rounded:focus {
+
+border-color: #339933;
+
+}
+
+
+
+select.rounded {
+
+border: 1px solid #3e5397;
+
+ -moz-border-radius: 10px;
+
+ -webkit-border-radius: 10px;
+
+border-radius: 5px;
+
+ -moz-box-shadow: 2px 2px 3px #666;
+
+ -webkit-box-shadow: 2px 2px 3px #3e5397;
+
+box-shadow: 2px 2px 3px #3e5397;
+
+font-size: 15px;
+
+outline: 0;
+
+ -webkit-appearance: none;
+
+ height:28px;
+
+ width:240px;
+
+ font-family:"Century Gothic";
+
+ color:#cccdcd;
+
+ margin:7px 0px 0px 9px;
+
+ padding-left:10px;
+
+ float:left;
+
+}
+
+
+
+.button
+
+{
+
+background-image:url(/images/button.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:24px;
+
+width:137px;
+
+margin:10px 0px 0px 9px;
+
+
+
+}
+
+
+
+.button:hover
+
+{
+
+background-image:url(/images/button2.png);
+
+background-repeat:no-repeat;
+
+color:#000000;
+
+}
+
+
+
+h1
+
+{
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#0066CC;
+
+float:left;
+
+margin:20px 0px 0px 30px;
+
+}
+
+
+
+h1:hover
+
+{
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#000000;
+
+float:left;
+
+}
+
+
+
+#slider
+
+{
+
+background-image:url(/images/slides.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+width:754px;
+
+height:261px;
+
+margin: 20px 0px 0px 110px;
+
+padding:0;
+
+
+
+}
+
+
+
+#categories
+
+{
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+border:1px solid #bdbdbd;
+
+float:right;
+
+height:auto;
+
+width:215px;
+
+margin:25px 110px 0px 0px;
+
+}
+
+
+
+#categories ul
+
+{
+
+margin: 0 auto;
+
+padding:0;
+
+text-decoration:none;
+
+float:left;
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+}
+
+
+
+#categories li
+
+{
+
+background-image:url(/images/listarrow.png);
+
+background-position:left;
+
+height:26px;
+
+width:auto;
+
+background-repeat:no-repeat;
+
+list-style:none;
+
+border-bottom:1px solid #d1d1d1;
+
+color:#808080;
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+margin:0px 5px 0px 5px;
+
+padding:5px 0px 0px 20px;
+
+
+
+}
+
+
+
+#categories li a
+
+{
+
+text-decoration:none;
+
+list-style:none;
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#808080;
+
+width:auto;
+
+
+
+}
+
+
+
+#categories li:last-child
+
+{
+
+border:none;
+
+}
+
+
+
+#categories li a:hover
+
+{
+
+color:#000000;
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+
+
+}
+
+
+
+#content
+
+{
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+height:auto;
+
+width: 725px;
+
+min-height:100px;
+
+float:left;
+
+margin: 15px 0px 0px 115px;
+
+padding:5px 10px 10px 10px;
+
+
+
+}
+
+
+
+h2
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#0066CC;
+
+float:left;
+
+margin:5px 0px 5px 17px;
+
+width:375px;
+
+text-transform:uppercase;
+
+}
+
+
+
+p
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#000000;
+
+float:left;
+
+margin:15px 5px 15px 5px;
+
+width:auto;
+
+text-align:justify;
+
+}
+
+
+
+.signin
+
+{
+
+background-image:url(/images/contentbg2.png);
+
+background-repeat:repeat;
+
+height:auto;
+
+width:350px;
+
+min-height:100px;
+
+float:left;
+
+}
+
+
+
+.signin_button
+
+{
+
+background-image:url(/images/signin.png);
+
+background-repeat:no-repeat;
+
+float:right;
+
+height:23px;
+
+width:137px;
+
+margin: 0px 15px 25px 0px;
+
+}
+
+
+
+.signin_button:hover
+
+{
+
+background-image:url(/images/signin2.png);
+
+background-repeat:no-repeat;
+
+float:right;
+
+height:23px;
+
+width:137px;
+
+}
+
+
+
+h3
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#aeaeae;
+
+float:left;
+
+margin:5px 0px 0px 5px;
+
+width:100%;
+
+font-style:italic;
+
+}
+
+
+
+.register_button
+
+{
+
+background-image:url(/images/register.png);
+
+background-repeat:no-repeat;
+
+float:right;
+
+height:23px;
+
+width:137px;
+
+margin: 0px 15px 10px 0px;
+
+
+
+}
+
+
+
+.register_button:hover
+
+{
+
+background-image:url(/images/register2.png);
+
+background-repeat:no-repeat;
+
+float:right;
+
+height:23px;
+
+width:137px;
+
+
+
+}
+
+
+
+.works
+
+{
+
+background-image:url(/images/contentbg2.png);
+
+background-repeat:repeat;
+
+height:auto;
+
+width:350px;
+
+min-height:100px;
+
+float:right;
+
+margin:0 auto;
+
+}
+
+
+
+h4
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#0066CC;
+
+float:none;
+
+margin:5px 0px 5px 17px;
+
+width:100%;
+
+text-transform:uppercase;
+
+}
+
+
+
+.works a
+
+{
+
+text-decoration:none;
+
+color:#7185bd;
+
+float:right;
+
+margin:0px 10px 10px 0px;
+
+font-family:Arial;
+
+font-size:17px;
+
+}
+
+
+
+.works a:hover
+
+{
+
+text-decoration:none;
+
+color:#000000;
+
+font-family:Arial;
+
+font-size:17px;
+
+}
+
+
+
+#featured
+
+{
+
+height:auto;
+
+width:auto;
+
+float:right;
+
+margin:-15px 110px 0px 0px;
+
+}
+
+
+
+#featured h5
+
+{
+
+background-image:url(/images/fheadbg.png);
+
+background-repeat:no-repeat;
+
+height:27px;
+
+width:213px;
+
+text-align:left;
+
+padding-top:3px;
+
+font-size:16px;
+
+font-family:"Century Gothic";
+
+color:#0066CC;
+
+}
+
+
+
+#featured .video
+
+{
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+width: 170px;
+
+height:215px;
+
+margin:-10px auto;
+
+border:4px solid #ffffff;
+
+
+
+}
+
+
+
+#featured .videoimg
+
+{
+
+background-image:url(/images/vimg.png);
+
+background-repeat:no-repeat;
+
+width: 170px;
+
+height:215px;
+
+float:left;
+
+}
+
+
+
+#featured .video h6
+
+{
+
+background-image:url(/images/vtitle.png);
+
+background-repeat:repeat-x;
+
+width:auto;
+
+text-align:center;
+
+font-size:14px;
+
+font-weight:bold;
+
+font-family:"Century Gothic";
+
+color:#ffffff;
+
+margin:140px auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#featured_slider
+
+{
+
+background-image:url(/images/featured.png);
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+margin:10px 0px 0px 120px;
+
+height:240px;
+
+width:961px;
+
+float:left;
+
+}
+
+
+
+#featured_slider h7
+
+{
+
+font-family:"Century Gothic";
+
+font-size:18px;
+
+width:100%;
+
+color:#0066CC;
+
+text-align:center;
+
+margin:10px auto;
+
+text-transform:uppercase;
+
+float:left;
+
+}
+
+#featured_slider h22
+
+{
+
+font-family:"Century Gothic";
+
+font-size:18px;
+
+width:100%;
+
+color:#0066CC;
+
+text-align:left;
+
+margin:10px auto;
+
+text-transform:uppercase;
+
+padding-left:10px;
+
+float:left;
+
+}
+
+
+
+#fslider
+
+{
+
+height:200px;
+
+width:810px;
+
+float:left;
+
+margin: 0px 0px 0px 0px;
+
+}
+
+
+
+.col2
+
+{
+
+height:155px;
+
+width:155px;
+
+float:left;
+
+margin: 0 auto;
+
+margin-left:7px;
+
+
+
+}
+
+
+
+#arrow
+
+{
+
+width:70px;
+
+height:155px;
+
+}
+
+
+
+.arrowl
+
+{
+
+background-image:url(/images/arrowl.png);
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+width:15px;
+
+height:18px;
+
+float:left;
+
+}
+
+
+
+.arrowr
+
+{
+
+background-image:url(/images/arrowr.png);
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+width:15px;
+
+height:18px;
+
+float:right;
+
+}
+
+
+
+.fimage
+
+{
+
+height:155px;
+
+width:155px;
+
+border:1px solid #e0e0e0;
+
+/*background-image:url(/images/featuredimg.png);
+
+background-repeat:no-repeat;		used for test*/
+
+}
+
+
+
+
+
+
+
+.ftext1
+
+{
+
+font-family:"Century Gothic";
+
+font-size:13px;
+
+color:#9d9d9d;
+
+padding-left:2px;
+
+}
+
+
+
+span
+
+{
+
+font-family:"Century Gothic";
+
+font-size:13px;
+
+color:#0066CC;
+
+}
+
+
+
+.social
+
+{
+
+float:left;
+
+margin: 10px 0px 0px 120px;
+
+width: 970px;
+
+}
+
+.social h8
+
+{
+
+font-family:"Century Gothic";
+
+font-size:16px;
+
+color:#0066CC;
+
+padding-left:2px;
+
+border-top:1px solid #ecf0f4;
+
+width:100%;
+
+float:left;
+
+text-align:center;
+
+padding-top:10px;
+
+}
+
+
+
+.social a
+
+{
+
+font-family:"Century Gothic";
+
+font-size:16px;
+
+color:#9d9d9d;
+
+text-decoration:none;
+
+padding-left:5px;
+
+}
+
+
+
+
+
+#footer
+
+{
+
+border: 1px solid #eaeaea;
+
+min-height:200px;
+
+width:960px;
+
+float:left;
+
+margin:10px 0px 0px 120px;
+
+}
+
+
+
+#social
+
+{
+
+width:430px;
+
+height:200px;
+
+margin:0 auto;
+
+float:left;
+
+
+
+}
+
+
+
+
+
+h9
+
+{
+
+color:#ababab;
+
+font-family:"Century Gothic";
+
+font-size:10px;
+
+float:left;
+
+margin:30px 0px 0px 20px;
+
+text-transform:uppercase;
+
+width:100%;
+
+}
+
+
+
+.icon
+
+{
+
+width:100px;
+
+}
+
+
+
+#social .facebook
+
+{
+
+
+
+background-image:url(/images/facebook.png);
+
+background-repeat:no-repeat;
+
+height:20px;
+
+width:20px;
+
+margin-top:10px;
+
+padding:3px;
+
+margin-left:30px;
+
+float:left;
+
+}
+
+
+
+#social .twitter
+
+{
+
+
+
+background-image:url(/images/twitter.png);
+
+background-repeat:no-repeat;
+
+height:20px;
+
+width:20px;
+
+padding:3px;
+
+margin-left:30px;
+
+float:left;
+
+}
+
+
+
+#social .email
+
+{
+
+
+
+background-image:url(/images/email.png);
+
+background-repeat:no-repeat;
+
+height:20px;
+
+width:20px;
+
+padding:3px;
+
+margin-left:30px;
+
+float:left;
+
+}
+
+
+
+#social .pintrest
+
+{
+
+
+
+background-image:url(/images/pintrest.png);
+
+background-repeat:no-repeat;
+
+height:20px;
+
+width:20px;
+
+margin-left:30px;
+
+padding:3px;
+
+float:left;
+
+}
+
+
+
+#fcol2
+
+{
+
+width:175px;
+
+height:200px;
+
+float:left;
+
+list-style:none;
+
+}
+
+
+
+#fcol3
+
+{
+
+width:175px;
+
+height:200px;
+
+float:left;
+
+list-style:none;
+
+}
+
+
+
+#fcol4
+
+{
+
+width:175px;
+
+height:200px;
+
+float:left;
+
+list-style:none;
+
+}
+
+
+
+
+
+#footer ul
+
+{
+
+text-decoration:none;
+
+height:180px;
+
+text-align:left;
+
+margin-top:50px;
+
+padding:0px 0px 0px 20px;
+
+}
+
+
+
+#footer li
+
+{
+
+margin-top:5px;
+
+list-style:none;
+
+font-family:"Century Gothic";
+
+font-size:10px;
+
+
+
+}
+
+
+
+#footer li a:hover
+
+{
+
+list-style:none;
+
+font-family:"Century Gothic";
+
+font-size:10px;
+
+color:#000000;
+
+
+
+}
+
+
+
+#footer li a
+
+{ 
+
+list-style:none;
+
+text-decoration:none;
+
+color:#0066CC;
+
+}
+
+
+
+
+
+#footer li:last-child
+
+{ 
+
+list-style:none;
+
+text-decoration:none;
+
+margin-top:15px;
+
+color:#585858;
+
+}
+
+
+
+.flogo
+
+{
+
+background-image:url(/images/footerlogo.png);
+
+background-repeat:no-repeat;
+
+height:29px;
+
+width:88px;
+
+float:left;
+
+margin:1px 0px 0px 20px;
+
+}
+
+
+
+.rights
+
+{
+
+float:right;
+
+margin:0px 20px 0px 0px;
+
+}
+
+
+
+.rights p
+
+{
+
+float:right;
+
+font-family:"Century Gothic";
+
+font-size:13px;
+
+color:#dfdfdf;
+
+}
+
+
+
+.rights a
+
+{
+
+font-family:"Century Gothic";
+
+font-size:13px;
+
+color:#0066CC;
+
+text-decoration:none;
+
+}
+
+
+
+.rights a:hover
+
+{
+
+font-family:"Century Gothic";
+
+font-size:13px;
+
+color:#000000;
+
+text-decoration:none;
+
+}
+
+
+
+
+
+
+
+h10
+
+{
+
+font-family:"Century Gothic";
+
+font-size:24px;
+
+float:left;
+
+color:#0066CC;
+
+margin:25px 0px 0px 115px;
+
+}
+
+
+
+#signin
+
+{
+
+height: 725px;
+
+width: 100%;
+
+margin:110px auto 0px auto;
+
+float:left;
+
+}
+
+
+
+#signinbg
+
+{
+
+
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+height:auto;
+
+width: 700px;
+
+min-height:100px;
+
+float:left;
+
+margin: 70px 0px 0px 200px;
+
+padding:5px 10px 10px 10px;
+
+
+
+}
+
+
+
+h11
+
+{
+
+font-family:Arial;
+
+font-size:15px;
+
+color:#000000;
+
+float:left;
+
+margin:5px 0px 5px 17px;
+
+width:375px;
+
+}
+
+
+
+h12
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#8b8b8b;
+
+float:left;
+
+text-align:right;
+
+
+
+}
+
+
+
+h13
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#8b8b8b;
+
+float:left;
+
+text-align:right;
+
+
+
+}
+
+
+
+
+
+input
+
+{
+
+float:left;
+
+
+
+width:90%;
+
+}
+
+
+
+.sin_button
+
+{
+
+background-image: url(/images/signin.png);
+
+background-repeat: no-repeat;
+
+float: left;
+
+height: 23px;
+
+width: 137px;
+
+margin: 10px 0px 20px 105px;
+
+}
+
+
+
+.sin_button:hover
+
+{
+
+background-image:url(/images/signin2.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+}
+
+
+
+.regis_button
+
+{
+
+background-image:url(/images/register.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+margin:10px 0px 20px 105px;
+
+
+
+}
+
+
+
+.regis_button:hover
+
+{
+
+background-image:url(/images/register2.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+
+
+
+
+}
+
+
+
+.banner
+
+{
+
+background-image:url(/images/banner.jpg);
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+height:232px;
+
+width:327px;
+
+float:right;
+
+}
+
+
+
+.register
+
+{
+
+height:auto;
+
+min-height:800px;
+
+margin: 20px 0px 0px 115px;
+
+float:left;
+
+}
+
+
+
+.register p1
+
+{
+
+font-family:Arial;
+
+font-size:15px;
+
+color:#8b8b8b;
+
+float:left;
+
+width:100%;
+
+}
+
+
+
+.register a
+
+{
+
+font-family:Arial;
+
+font-size:15px;
+
+color:#990000;
+
+}
+
+
+
+.register h14
+
+{
+
+font-family:Arial;
+
+font-size:15px;
+
+color:#000000;
+
+float:left;
+
+margin-top:5px;
+
+margin-bottom:10px;
+
+width:100%;
+
+}
+
+
+
+
+
+.register span
+
+{
+
+font-family:Arial;
+
+font-size:10px;
+
+color:#000000;
+
+}
+
+
+
+.register p2
+
+{
+
+font-family:Arial;
+
+font-size:15px;
+
+color:#8b8b8b;
+
+float:left;
+
+margin-top:15px;
+
+}
+
+
+
+#product
+
+{
+
+height: auto;
+
+width: 700px;
+
+min-height: 100px;
+
+float: left;
+
+margin: 15px 0px 0px 105px;
+
+padding: 5px 0px 10px 10px;
+
+
+
+
+
+}
+
+
+
+.productimg
+
+{
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+border:1px solid #bebebe;
+
+min-height:280px;
+
+min-width:280px;
+
+float:left;
+
+}
+
+
+
+.productviews
+
+{
+
+height:auto;
+
+width:auto;
+
+float:left;
+
+margin-left: -30px;
+
+margin-top: 158px;
+
+}
+
+
+
+.productviews li
+
+{
+
+background-image:url(/images/Productviewbg.png);
+
+background-repeat:no-repeat;
+
+height:50px;
+
+width:40px;
+
+list-style:none;
+
+margin-top:5px;
+
+}
+
+.productviews ul
+
+{
+
+height:100px;
+
+width:50px;
+
+float:left;
+
+list-style:none;
+
+}
+
+
+
+.productdesc
+
+{
+
+width:350px;
+
+height:280px;
+
+float:left;
+
+}
+
+
+
+.productdesc h15
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#748edc;
+
+float:left;
+
+margin:2px 0px 2px 5px;
+
+width:100%;
+
+}
+
+
+
+.productdesc h16
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#000000;
+
+float:left;
+
+width:100%;
+
+margin:0px 0px 2px 5px;
+
+}
+
+
+
+.star
+
+{
+
+background-image:url(/images/star.png);
+
+height: 16px;
+
+width:108px;
+
+float:left;
+
+margin:3px 0px 0px 5px;
+
+}
+
+
+
+.productdesc h17
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#7e7e7e;
+
+float:left;
+
+width:100%;
+
+margin:10px 0px 0px 5px;
+
+}
+
+
+
+.productdesc span
+
+{
+
+font-family:Arial;
+
+font-size:17px;
+
+color:#990000;
+
+width:100%;
+
+margin:0px 0px 2px 5px;
+
+}
+
+
+
+.productdesc a
+
+{
+
+font-family:Arial;
+
+font-size:11px;
+
+color:#748edc;
+
+width:100%;
+
+margin:0px 0px 2px 5px;
+
+float:left;
+
+text-decoration:none;
+
+}
+
+
+
+#cart
+
+{
+
+background-image:url(/images/addbg.png);
+
+background-repeat:repeat;
+
+border:1px solid #bcc4ca;
+
+float:right;
+
+height:auto;
+
+width:255px;
+
+min-height:245px;
+
+margin:25px 110px 0px 0px;
+
+}
+
+
+
+#cart h18
+
+{
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#000000;
+
+float:left;
+
+margin:20px 0px 2px 65px;
+
+text-align:center;
+
+}
+
+
+
+#cart .addtocart
+
+{
+
+background-image:url(/images/addtocart.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px 0px 0px 50px;
+
+float:left;
+
+}
+
+
+
+#cart .addtocart:hover
+
+{
+
+background-image:url(/images/addtocart2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#cart a
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #748EDC;
+
+margin: 10px 5px 0px 43px;
+
+float: left;
+
+text-align: center;
+
+}
+
+
+
+#cart a:hover
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #000000;
+
+text-align: center;
+
+}
+
+
+
+
+
+#cart span
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #000000;
+
+float: left;
+
+text-align: center;
+
+margin: 10px 5px 0px 0px;
+
+}
+
+
+
+
+
+#cart h19
+
+{
+
+font-family: Arial;
+
+font-size: 12px;
+
+color: #848484;
+
+float: left;
+
+text-align: center;
+
+margin: 10px 5px 0px 10px;
+
+}
+
+
+
+
+
+#cart p
+
+{
+
+font-family: Arial;
+
+font-size: 12px;
+
+color: #000000;
+
+float: left;
+
+text-align: left;
+
+margin: 5px 10px 0px 10px;
+
+}
+
+
+
+.cart_register
+
+{
+
+background-image:url(/images/register.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+margin: 15px 0px 10px 57px;
+
+
+
+}
+
+
+
+.cart_register:hover
+
+{
+
+background-image:url(/images/register2.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+
+
+}
+
+
+
+#product_specifications
+
+{
+
+float:left;
+
+background-image:url(/images/catbg.png);
+
+background-repeat:repeat;
+
+border:1px solid #cccccc;
+
+height:auto;
+
+width:auto;
+
+min-height:100px;
+
+min-width:615px;
+
+margin: 0px 0px 10px 115px;
+
+padding: 0px 0px 5px 10px;
+
+}
+
+
+
+
+
+.product_specifications
+
+{
+
+float:left;
+
+background-image:url(/images/contentbg2.png);
+
+background-repeat:repeat;
+
+height:auto;
+
+width:auto;
+
+min-width:225px;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+}
+
+
+
+.product_specifications ul
+
+{
+
+float:left;
+
+height:auto;
+
+width:auto;
+
+min-width:225px;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+}
+
+
+
+
+
+.product_specifications li
+
+{
+
+height:auto;
+
+width:auto;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+padding:5px 0px 2px 0px;
+
+}
+
+
+
+#product_specifications h20
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#748edc;
+
+float:left;
+
+margin:2px 0px 3px 5px;
+
+width:100%;
+
+}
+
+
+
+.product_specifications_values
+
+{
+
+float:left;
+
+height:auto;
+
+width:auto;
+
+min-width:225px;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+}
+
+
+
+.product_specifications_values ul
+
+{
+
+float:left;
+
+height:auto;
+
+width:auto;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+}
+
+
+
+.product_specifications_values li
+
+{
+
+height:auto;
+
+width:auto;
+
+list-style:none;
+
+font-family:Arial;
+
+font-size:14px;
+
+padding:5px 0px 2px 0px;
+
+color:#7e7e7e;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

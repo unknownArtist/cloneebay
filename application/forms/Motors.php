@@ -10,7 +10,7 @@ class Application_Form_Motors extends Zend_Form
 
         $category = new Zend_Form_Element_Hidden('category');
         $category->setRequired(TRUE)
-                 
+                  
                   ->setValue($_SESSION)
                   ->addFilter('StripTags')
                   ->addFilter('StringTrim');
@@ -79,9 +79,9 @@ class Application_Form_Motors extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
-                                       'regexNotMatch'=>'Kindly Enter only Alphabets'
+                                       'regexNotMatch'=>'Kindly Enter only Alphabets and numerics'
                                       )
                        ));
         

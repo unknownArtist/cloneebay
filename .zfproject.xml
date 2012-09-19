@@ -35,6 +35,11 @@
           <actionMethod actionName="homeAndDecoration"/>
           <actionMethod actionName="collectableArt"/>
         </controllerFile>
+        <controllerFile controllerName="Items">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="list"/>
+          <actionMethod actionName="itemDetail"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Register"/>
@@ -124,6 +129,15 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Addpost">
             <viewScriptFile forActionName="collectableArt"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Items">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Items">
+            <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Items">
+            <viewScriptFile forActionName="itemDetail"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

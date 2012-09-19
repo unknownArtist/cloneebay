@@ -2,27 +2,44 @@
 <h2>Welcome to home</h2>
 <?php endif; ?>
 
-<div id="slider">                                                   <!--slider-->
+<div>
+<?php 
+     
+?>   
+</div>                                                      
 
-</div>                                                              <!--slider-->
+<?php foreach ($this->pitemDetail as $piDetail): ?>
+ 		<?php echo $piDetail['title']; ?><br />
+ 		<?php echo $piDetail['condition']; ?><br />
+ 		<?php echo $piDetail['countries']; ?><br />
+ 		<?php echo $piDetail['subtitle']; ?><br />
+ 		<?php echo $piDetail['SaleType']; ?><br />
+ 		<?php echo $piDetail['PropertyType']; ?><br />
+ 		<?php echo $piDetail['ZipPostalCode']; ?><br />
+ 		<?php echo $piDetail['StateProvince']; ?><br />
+ 		<?php echo $piDetail['genre']; ?><br />
+ 		<?php echo $piDetail['desc']; ?><br />
+
+<?php if($piDetail['auctionOrFixed'] == '0'): ?>
+ 	<a href="#">Bid Now</a>
+<?php endif; ?>
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+  <a href="#">Add to Cart</a>
+<?php endif; ?>
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+	 <a href="#">Buy Now</a>
+<?php endif; ?>
 
 
+  <?php endforeach; ?>
 
 <div id="categories">                                               <!--categories-->
 
 
 
-<ul>
 
-<?php foreach ($this->items as $item): ?>
- <li><a href=<?php echo $this->url(array(
-		'controller'=>'items',
-		'action'=>'list',
-		'cat'=> $item['CategoryName'])); ?> ><?php echo  $item['CategoryName']?></a></li>
-
-  <?php endforeach; ?>
-
-</ul>
 
 </div>                                                              <!--categories-->
 

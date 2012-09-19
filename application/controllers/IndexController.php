@@ -10,7 +10,8 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+       $products = new Application_Model_Categories();
+       $this->view->items = $products->fetchAll()->toArray();
     }
 
     public function addAction()

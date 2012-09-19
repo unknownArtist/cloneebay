@@ -121,8 +121,8 @@ class AddpostController extends Zend_Controller_Action
       $_SESSION = $this->_request->getParam('cat');
         $form = new Application_Form_HomeDecoration();
         $this->view->form = $form;
-        echo $this->_request->getParam('cat');
-        die();
+         $_SESSION = $this->_request->getParam('cat');
+         
         if ($this->getRequest()->isPost()) 
             {
             
