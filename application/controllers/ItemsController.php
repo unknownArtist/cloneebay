@@ -38,6 +38,45 @@ class ItemsController extends Zend_Controller_Action
 
     }
 
+    public function addtocartAction()
+    {
+
+        if(!Zend_Auth::getInstance()->hasIdentity())
+        {
+            $this->_redirect('user/sign-in');
+        }
+
+        else
+
+        {
+            $id = $this->_request->getParam('id');
+
+                if(isset($_SESSION['cart']))
+                {
+                    $_SESSION['cart'][] = $id;
+                }
+                else
+                {
+                    $_SESSION['cart'] = array();
+                    $_SESSION['cart'][] = $id;
+
+                }     
+
+            $this->_redirect('index');
+        }
+    }
+
+    public function checkoutAction()
+    {
+        // echo "checkout.....";
+        // die();
+
+        // $products = new Application_Model_Products();
+        // $where = "id = '$id'";
+        // $this->view->pitemDetail = $products->fetchAll($where)->toArray();
+
+    }
+
 
 }
 
