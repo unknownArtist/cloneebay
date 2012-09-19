@@ -40,6 +40,9 @@
           <actionMethod actionName="list"/>
           <actionMethod actionName="itemDetail"/>
         </controllerFile>
+        <controllerFile controllerName="Bids">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Register"/>
@@ -55,6 +58,7 @@
         <formFile formName="CdMedia"/>
         <formFile formName="Entertainment"/>
         <formFile formName="Sports"/>
+        <formFile formName="Bids"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -69,6 +73,7 @@
         <modelFile modelName="Catagory"/>
         <modelFile modelName="CountriesList"/>
         <modelFile modelName="Products"/>
+        <modelFile modelName="Bids"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -138,6 +143,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Items">
             <viewScriptFile forActionName="itemDetail"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Bids">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
