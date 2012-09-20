@@ -75,14 +75,8 @@ class AddpostController extends Zend_Controller_Action
                    $products = new Application_Model_Products();
                    $id = Zend_Auth::getInstance()->getIdentity()->id;
                    $data = $form->getValues();
-<<<<<<< HEAD
                    $data['user_id'] = $id;
-
-=======
-                   array_push($data['user_id'] );
-                   print_r($data);
-                   die();
->>>>>>> 3a0f9927f015495fc42e6d852fb2468224788e2e
+                 
                    $products->insert($data);
                    echo "values added";
                    $form->reset();
@@ -114,8 +108,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                    $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
-                   echo "values added";
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);
                    $form->reset();
                 }
                 else{
@@ -143,7 +140,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                    $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);
                    echo "values added";
                    $form->reset();
                 }
@@ -171,7 +172,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                    $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);
                    echo "values added";
                    $form->reset();
                 }
@@ -197,7 +202,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                    $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);
                    echo "values added";
                    $form->reset();
                 }
@@ -223,8 +232,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                   $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
-                   echo "values added";
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);                   echo "values added";
                    $form->reset();
                 }
                 else{
@@ -248,7 +260,11 @@ class AddpostController extends Zend_Controller_Action
             if ($form->isValid($formData)) 
                 {
                    $products = new Application_Model_Products();
-                   $products->insert($form->getValues());
+                   $id = Zend_Auth::getInstance()->getIdentity()->id;
+                   $data = $form->getValues();
+                   $data['user_id'] = $id;
+                 
+                   $products->insert($data);
                    echo "values added";
                    $form->reset();
                 }
