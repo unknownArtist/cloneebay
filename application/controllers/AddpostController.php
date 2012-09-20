@@ -50,9 +50,16 @@ class AddpostController extends Zend_Controller_Action
 
     public function selectCatagoryAction()
     {
+      if(Zend_Auth::getInstance()->hasIdentity())
+      {
         $cat = new Application_Model_Categories();
         $this->view->cat = $cat->fetchAll()->toArray();
 
+      }
+      else
+      {
+          $this->_redirect('/user/sign-in');
+      }
     }
 
     public function fashionAction()

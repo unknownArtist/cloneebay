@@ -23,7 +23,7 @@
    <?php echo $piDetail['desc']; ?><br />
 
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
-  <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>'>Bid Now</a>
+  <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'>Bid Now</a>
 <?php endif; ?>
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
