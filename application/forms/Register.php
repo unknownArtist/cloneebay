@@ -10,7 +10,7 @@ class Application_Form_Register extends Zend_Form
         $getCountryList = $getCountryList->fetchAll()->toArray();
 
         foreach ($getCountryList as $country) {
-            $listCountries[] = $country['name'];
+            $listCountries[] = $country['countryName'];
         }
     //////////////////////////////////////Zend From////////////////////////////////////////////////
 

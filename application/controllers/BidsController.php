@@ -26,9 +26,10 @@ class BidsController extends Zend_Controller_Action
 	                {
 	                	$bids = new Application_Model_Bids();
 	                	$data = array(
-	                		'item_id' => $this->_request->getParam('itemID'),
-	                		'user_id' => Zend_Auth::getInstance()->getIdentity()->id,
-	                		'amount'  => $form->getValue('amount'),
+	                		'item_id' 		=> $this->_request->getParam('itemID'),
+	                		'user_id' 		=> Zend_Auth::getInstance()->getIdentity()->id,
+	                		'amount'  		=> $form->getValue('amount'),
+	                		'itemOwner_id'	=> $this->_request->getParam('itemOwnerid'),
 	                		);
 	                	$bids->insert($data);
 
