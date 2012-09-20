@@ -29,7 +29,7 @@ class Application_Form_Electronics extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -131,11 +131,11 @@ class Application_Form_Electronics extends Zend_Form
     $pic->setLabel('Select the file to upload:')
                       ->setDestination(APPLICATION_PATH.'/../public/images')
                       ->addValidator('Count', false, 1) // ensure only 1 file
-<<<<<<< HEAD
+
                       ->addValidator('Size', false, 402400) // limit to 1MB
-=======
+
                       ->addValidator('Size', false, 409600) // limit to 4MB
->>>>>>> 30c8a292042992771c895a8a47ac04f6c2a2d48d
+
                       ->addValidator('Extension', false, 'jpg,jpeg,png,gif');
                   
 
