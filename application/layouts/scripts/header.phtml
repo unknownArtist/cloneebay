@@ -79,33 +79,31 @@
 <div class="searchbg">
 
 
+<form name="search" action="search/index" method="post">
 
-<input type="text" class="rounded" value="Search Here..." name="search" onfocus="this.value=''; "/>
+	<input type="text" class="rounded" value="" name="searchtxt" onfocus="this.value=''; "/>
 
-<select class="rounded">
+	<select name="Category" class="rounded">
 
-<optgroup>
+	<optgroup>
 
-<option>Select a Category</option>
+	<option >Select a Category</option>
 
-  <?php  $cat = new Application_Model_Categories();?>
-  <?php $data = $cat->fetchAll(); ?>
-	<?php foreach($data as $item): ?>
-			<option><?php echo $item['CategoryName'];?></option>
+	  <?php  $cat = new Application_Model_Categories();?>
+	  <?php $data = $cat->fetchAll(); ?>
 
-     <?php endforeach; ?>
+		<?php foreach($data as $item): ?>
+				<option value="<?php echo $item['CategoryName'];?>"><?php echo $item['CategoryName'];?></option>
+	     <?php endforeach; ?>
 
-</optgroup>
+	</optgroup>
 
-</select>
+	</select>
+
+	 <input class="button" type="submit" value="" />
+</form>
 
 
-
-<a href="#"><div class="button">
-
-</div></a>
-
-</div>
 
 
 
