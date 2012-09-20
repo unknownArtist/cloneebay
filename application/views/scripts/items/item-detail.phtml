@@ -10,7 +10,40 @@
 </div>                                                      
 
 <?php foreach ($this->pitemDetail as $piDetail): ?>
+
+
+<div id="cart">												<!--cart-->
+
+<h18>Quantity: <select><optgroup><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></option><option>11</option></option><option>12</option></option><option>13</option></option><option>14</option></option><option>15</option></option><option>16</option></option><option>17</option></option><option>18</option></option><option>19</option></option><option>20</option></optgroup></select></h18>
+
+
+
+<div class="addtocart">
+
+</div>
+
+
+
+<a href="#">SIGN IN </a><span> to turn on 1-click ordering</span>
+
+
+
+<h19>Not Registered yet</h19>
+
+<p>Join the millions of people who are already a part of the bids or buys family.</p>
+
+<div class="cart_register">
+
+</div>
+
+
+
+</div>
+
+
+<div id="product">													<!--product-->
   
+<<<<<<< HEAD
   Title: <?php echo $piDetail['title']; ?><br />
   condition: <?php echo $piDetail['condition']; ?><br />
   countries: <?php echo $piDetail['countries']; ?><br />
@@ -70,10 +103,10 @@
    <?php if($piDetail['category'] == 'Motors'): ?>
   Engine type: <?php echo $piDetail['engine']; ?><br />
   <?php endif; ?>
+=======
+>>>>>>> 449399b5e0144af4042e461243eebe390d843fc2
   
-  <?php if($piDetail['category'] == 'Motors'): ?>
-     Drive Type: <?php echo $piDetail['driveType']; ?><br />
- <?php endif; ?>
+
 
 
 
@@ -128,99 +161,168 @@
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
   <a href="#">Buy Now</a>
 <?php endif; ?>
+<div class="productimg">
+
+</div>
+
+
+
+<div class="productviews">
+
+<ul>
+
+<li></li>
+
+<li></li>
+
+</ul>
+
+</div>
+
+
+
+<div class="productdesc">
+
+<h15>Product Name</h15>
+
+<h16>Model Number</h16>
+
+<a href="#"><div class="star">
+
+</div></a>
+
+<h17>Last Price: $8,000.00</h17>
+
+<h17>Price: <span>$5,295.97</span></h17><a href="#">Click here for shipping details</a>
+
+<h17>You Save: $2.704.03</h17>
+
+</div>
+
+
+
+</div>																<!--product-->
+
+
+
+<div id="product_specifications">									<!--product specifications-->
+
+<h20>Product Specifications</h20>
+
+
+
+<div class="product_specifications">
+
+<ul>
+
+  <li>condition: <?php echo $piDetail['condition']; ?></li>
+  <li>countries: <?php echo $piDetail['countries']; ?></li>
+  <li>subtitle: <?php echo $piDetail['subtitle']; ?></li>
+  <li>SaleType: <?php echo $piDetail['SaleType']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>url: <?php echo $piDetail['url']; ?></li>
+  <li>description: <?php echo $piDetail['description']; ?></li>
+  <li>startPrice: <?php echo $piDetail['startPrice']; ?></li>
+  <li>BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?></li>
+  <li>Setting: <?php echo $piDetail['Setting']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>NumerOfBathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?></li>
+  <li>NumberofBedrooms: <?php echo $piDetail['NumberofBedrooms']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>PropertyAddress: <?php echo $piDetail['PropertyAddress']; ?></li>
+  <li>SellerStateofResidence: <?php echo $piDetail['SellerStateofResidence']; ?></li>
+  <li>mileage: <?php echo $piDetail['mileage']; ?><br />
+  <li>ExteriorColor: <?php echo $piDetail['ExteriorColor']; ?></li>
+  <li>interiorcolor: <?php echo $piDetail['interiorcolor']; ?></li>
+  <li>upc: <?php echo $piDetail['upc']; ?></li>
+  <li>type: <?php echo $piDetail['type']; ?></li>
+  <li>brand: <?php echo $piDetail['brand']; ?></li>
+   
+  <?php if($piDetail['category']=='Motors'):?> <li>model: <?php echo $piDetail['model']; ?></li><?php endif; ?>
+  <li>pic: <?php echo $piDetail['pic']; ?></li>
+  <li>vin: <?php echo $piDetail['vin']; ?></li>
+  <li>make: <?php echo $piDetail['make']; ?></li>
+  <li>ReleaseYear: <?php echo $piDetail['releaseYear']; ?></li>
+  <?php if($piDetail['category'] == 'Motors'): ?>
+  Engine type: <?php echo $piDetail['engine']; ?><br />
+  <?php endif; ?>
+  
+  <?php if($piDetail['category'] == 'Motors'): ?>
+     Drive Type: <?php echo $piDetail['driveType']; ?><br />
+ <?php endif; ?>
+
+
+
+</ul>
+
+</div>
+
+
+<div class="product_specifications_values"> 
+
+<ul>
+
+
+
+  <li>condition: <?php echo $piDetail['condition']; ?></li>
+  <li>countries: <?php echo $piDetail['countries']; ?></li>
+  <li>subtitle: <?php echo $piDetail['subtitle']; ?></li>
+  <li>SaleType: <?php echo $piDetail['SaleType']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>url: <?php echo $piDetail['url']; ?></li>
+  <li>description: <?php echo $piDetail['description']; ?></li>
+  <li>startPrice: <?php echo $piDetail['startPrice']; ?></li>
+  <li>BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?></li>
+  <li>Setting: <?php echo $piDetail['Setting']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>NumerOfBathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?></li>
+  <li>NumberofBedrooms: <?php echo $piDetail['NumberofBedrooms']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>PropertyAddress: <?php echo $piDetail['PropertyAddress']; ?></li>
+  <li>SellerStateofResidence: <?php echo $piDetail['SellerStateofResidence']; ?></li>
+  <li>mileage: <?php echo $piDetail['mileage']; ?><br />
+  <li>ExteriorColor: <?php echo $piDetail['ExteriorColor']; ?></li>
+  <li>interiorcolor: <?php echo $piDetail['interiorcolor']; ?></li>
+  <li>upc: <?php echo $piDetail['upc']; ?></li>
+  <li>type: <?php echo $piDetail['type']; ?></li>
+  <li>brand: <?php echo $piDetail['brand']; ?></li>
+   
+  <?php if($piDetail['category']=='Motors'):?> <li>model: <?php echo $piDetail['model']; ?></li><?php endif; ?>
+  <li>pic: <?php echo $piDetail['pic']; ?></li>
+  <li>vin: <?php echo $piDetail['vin']; ?></li>
+  <li>make: <?php echo $piDetail['make']; ?></li>
+  <li>ReleaseYear: <?php echo $piDetail['releaseYear']; ?></li>
+  
+     <?php if($piDetail['category'] == 'Motors'): ?>
+  Engine type: <?php echo $piDetail['engine']; ?><br />
+  <?php endif; ?>
+  
+  <?php if($piDetail['category'] == 'Motors'): ?>
+     Drive Type: <?php echo $piDetail['driveType']; ?><br />
+ <?php endif; ?>
+
+
+
+</ul>
+
+</div>
+
+
+</div>																<!--product specifications-->
 
 
   <?php endforeach; ?>
 
-<div id="categories">                                               <!--categories-->
 
+<div id="featured_slider">						<!--featured-->
 
-
-
-
-</div>                                                              <!--categories-->
-
-
-
-<div id="content">                                                  <!--content-->
-
-<h2>Sign In</h2>
-
-<div class="signin">                                                <!--signin-->
-
-
-
-<p>Back for more fun? Sign in now to buy, bid and sell, or to manage your account.</p>
-
-
-
-<a href="#"><div class="signin_button">
-
-</div></a>
-
-
-
-<h3>Not Registered Yet?</h3>
-
-<p>Join the millions of people who are already a part of the bids or buys family.</p>
-
-
-
-<a href="#"><div class="register_button">
-
-</div></a>
-
-
-
-</div>                                                              <!--signin-->
-
-
-
-<h4>How It Works</h4>
-
-<div class="works">                                                 <!--works-->
-
-<h3>Lorem Ipsum</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet mi nunc, sed egestas ante. Morbi fringilla, nulla ut pulvinar tempus, purus mauris ultricies justo, id consequat sapien tellus ut eros. In facilisis massa sit amet eros molestie luctus. Maecenas adipiscing enim et enim condimentum sit amet hendrerit ante aliquet.</p><a href="#">More...</a>
-
-
-
-</div>                                                              <!--works-->
-
-
-
-</div>                                                              <!--content-->
-
-
-
-
-
-<div id="featured">                                                 <!--featured-->
-
-<h5>Featured</h5>
-
-
-
-<div class="video">
-
-<div class="videoimg">
-
-<h6>Featured Today</h6>
-
-</div>
-
-</div>
-
-
-
-</div>                                                              <!--featured-->
-
-
-
-<div id="featured_slider">                      <!--featured-->
-
-<h7>Deals of the day</h7>
+<h22>Related Products</h22>
 
 
 
@@ -236,7 +338,7 @@
 
 <div class="fimage"></div>
 
-<div class="ftext1">Category:<span> Accosories</span></div>
+<div class="ftext1">Category:<span> Watches</span></div>
 
 <div class="ftext1">Price:<span> 5$</span></div>
 
@@ -246,7 +348,7 @@
 
 <div class="fimage"></div>
 
-<div class="ftext1">Category:<span> Jewlery</span></div>
+<div class="ftext1">Category:<span>  Watches</span></div>
 
 <div class="ftext1">Price:<span> 10$</span></div>
 
@@ -256,7 +358,7 @@
 
 <div class="fimage"></div>
 
-<div class="ftext1">Category:<span> Navigation</span></div>
+<div class="ftext1">Category:<span>  Watches</span></div>
 
 <div class="ftext1">Price:<span> 70$</span></div>
 
@@ -266,7 +368,7 @@
 
 <div class="fimage"></div>
 
-<div class="ftext1">Category:<span> Phones</span></div>
+<div class="ftext1">Category:<span>  Watches</span></div>
 
 <div class="ftext1">Price:<span> 59.7$</span></div>
 
@@ -276,7 +378,7 @@
 
 <div class="fimage"></div>
 
-<div class="ftext1">Category:<span> Sports</span></div>
+<div class="ftext1">Category:<span>  Watches</span></div>
 
 <div class="ftext1">Price:<span> 15$</span></div>
 
@@ -294,7 +396,9 @@
 
 
 
-</div>                                  <!--featured-->
+</div>	
+
+
 
 
 

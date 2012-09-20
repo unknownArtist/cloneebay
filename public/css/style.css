@@ -22,7 +22,7 @@ text-align:justify;
 
 color:#000000;
 
-background-image: url(//images/bg2.png);
+background-image: url(/images/bg2.png);
 
 
 
@@ -46,7 +46,7 @@ padding:0;
 
 
 
-background-image:url(//images/bg.png);
+background-image:url(/images/bg.png);
 
 background-repeat:no-repeat;
 
@@ -461,6 +461,8 @@ height:24px;
 width:137px;
 
 margin:10px 0px 0px 9px;
+
+border:0px;
 
 
 
@@ -2178,8 +2180,29 @@ margin:2px 0px 2px 5px;
 
 width:100%;
 
+text-transform:uppercase;
+
 }
 
+.productdesc h15 a:link
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#748edc;
+
+float:left;
+
+margin:2px 0px 2px 5px;
+
+width:100%;
+
+text-transform:uppercase;
+
+}
 
 
 .productdesc h16
