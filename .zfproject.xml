@@ -43,6 +43,9 @@
         <controllerFile controllerName="Bids">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Search">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Register"/>
@@ -145,6 +148,9 @@
             <viewScriptFile forActionName="itemDetail"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Bids">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Search">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
