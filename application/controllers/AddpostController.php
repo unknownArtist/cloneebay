@@ -286,16 +286,3 @@ class AddpostController extends Zend_Controller_Action
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
