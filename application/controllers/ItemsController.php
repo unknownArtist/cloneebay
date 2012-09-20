@@ -70,7 +70,7 @@ class ItemsController extends Zend_Controller_Action
     {
 
         //session_destroy();
-        session_unset();
+        //session_unset();
 
 
     }
