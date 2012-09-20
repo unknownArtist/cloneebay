@@ -56,7 +56,7 @@ class Application_Form_Register extends Zend_Form
                  ->addFilter('StringTrim')
                  ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z0-1 ]+$/', 
+                                       'pattern'=>'/[a-zA-Z]*|\d*|-*|\.*|_*/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -77,7 +77,7 @@ class Application_Form_Register extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9. ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
@@ -108,7 +108,7 @@ class Application_Form_Register extends Zend_Form
                  ->addFilter('StringTrim')
                  ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z0-1 ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )

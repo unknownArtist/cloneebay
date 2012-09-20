@@ -13,6 +13,7 @@ class BidsController extends Zend_Controller_Action
     	if(Zend_Auth::getInstance()->hasIdentity())
     	{
 	        $form = new Application_Form_Bids();
+	        
 	        $this->view->form = $form;
 
 	        
