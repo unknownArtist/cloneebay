@@ -43,7 +43,7 @@ class Application_Form_CdMedia extends Zend_Form
                   ->addFilter('StringTrim')
                   ->addValidator('regex', true, 
                                  array(
-                                       'pattern'=>'/^[(a-zA-Z ]+$/', 
+                                       'pattern'=>'/^[(a-zA-Z0-9 ]+$/', 
                                        'messages'=>array(
                                        'regexNotMatch'=>'Kindly Enter only Alphabets'
                                       )
