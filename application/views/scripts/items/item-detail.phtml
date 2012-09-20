@@ -42,10 +42,15 @@
   pic: <?php echo $piDetail['pic']; ?><br />
   vin: <?php echo $piDetail['vin']; ?><br />
   make: <?php echo $piDetail['make']; ?><br />
-  releaseYear: <?php echo $piDetail['releaseYear']; ?><br />
-  engine: <?php echo $piDetail['engine']; ?><br />
-  driveType: <?php echo $piDetail['driveType']; ?><br />
- 
+  ReleaseYear: <?php echo $piDetail['releaseYear']; ?><br />
+  
+   <?php if($piDetail['category'] == 'Motors'): ?>
+  Engine type: <?php echo $piDetail['engine']; ?><br />
+  <?php endif; ?>
+  
+  <?php if($piDetail['category'] == 'Motors'): ?>
+     Drive Type: <?php echo $piDetail['driveType']; ?><br />
+ <?php endif; ?>
 
 
 
