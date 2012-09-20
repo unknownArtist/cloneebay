@@ -8,6 +8,7 @@
 ?>   
 </div>                                                      
 
+<?php if(isset($_SESSION['cart'])): ?>
 
 <?php foreach($_SESSION['cart'] as $item): ?>
   <?php  $products = new Application_Model_Products();?>
@@ -24,6 +25,7 @@
     <br />
 <?php endforeach; ?>
 
+<?php endif; ?>
 <div id="categories">                                               <!--categories-->
 
 
