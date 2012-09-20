@@ -15,6 +15,7 @@ class Application_Form_SignIn extends Zend_Form
                  ->setErrorMessages(array('email is Required'))
                  ->addFilter('StripTags')
                  ->addFilter('StringTrim');
+		$email->class = "text";
 				 
 		
         
@@ -25,10 +26,11 @@ class Application_Form_SignIn extends Zend_Form
                  ->setRequired(TRUE)
                  ->addFilter('StripTags')
                  ->addFilter('StringTrim');
+		$password->class = "text";		 
         
         
-        $submit = new Zend_Form_Element_Submit('Login');
-		$submit->class = "button";
+        $submit = new Zend_Form_Element_Submit('i');
+		$submit->class = "sin_button";
         
         $this->addElements(array(
             
