@@ -62,7 +62,7 @@ class ItemsController extends Zend_Controller_Action
 
                 }     
 
-            $this->_redirect('index');
+            $this->_redirect('/items/list/cat/'.$this->_request->getParam('cat'));
         }
     }
 

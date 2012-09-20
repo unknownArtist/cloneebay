@@ -105,6 +105,7 @@ class UserController extends Zend_Controller_Action
                     {
                         $auth->getStorage()->write($authAdapter->getResultRowObject(array('id', 'f_name','status')));
                         $this->_redirect('index');
+                        session_start();
                     }
                     else
                     {

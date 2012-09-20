@@ -1,7 +1,4 @@
-<?php if(Zend_Auth::getInstance()->hasIdentity()): ?>
 
-<h2>Welcome to home</h2>
-<?php endif; ?>
 
 <div>
 <?php 
@@ -43,68 +40,10 @@
 
 <div id="product">													<!--product-->
   
-<<<<<<< HEAD
-  Title: <?php echo $piDetail['title']; ?><br />
-  condition: <?php echo $piDetail['condition']; ?><br />
-  countries: <?php echo $piDetail['countries']; ?><br />
-  subtitle: <?php echo $piDetail['subtitle']; ?><br />
-  SaleType: <?php echo $piDetail['SaleType']; ?><br />
-  PropertyType: <?php echo $piDetail['PropertyType']; ?><br />
-  ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?><br />
-  StateProvince: <?php echo $piDetail['StateProvince']; ?><br />
-  url: <?php echo $piDetail['url']; ?><br />
-  Description: <?php echo $piDetail['description']; ?><br />
-  startPrice: <?php echo $piDetail['startPrice']; ?><br />
- 
- <?php if($piDetail['auctionOrFixed'] == '1'): ?>
-  BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?><br />
- <?php endif; ?>
-  
-  Setting: <?php echo $piDetail['Setting']; ?><br />
-  PropertyType: <?php echo $piDetail['PropertyType']; ?><br />
-  Numer Of Bathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?><br />
-  Number of Bedrooms: <?php echo $piDetail['NumberofBedrooms']; ?><br />
-  Zip PostalCode: <?php echo $piDetail['ZipPostalCode']; ?><br />
-  State Province: <?php echo $piDetail['StateProvince']; ?><br />
-  Property Address: <?php echo $piDetail['PropertyAddress']; ?><br />
-  Seller State of Residence: <?php echo $piDetail['SellerStateofResidence']; ?><br />
-  
-<?php if($piDetail['category'] == 'Motors'): ?> 
-  Mileage: <?php echo $piDetail['mileage']; ?><br />
-  <?php endif; ?>
-  
-  Exterior Color: <?php echo $piDetail['ExteriorColor']; ?><br />
+
+
   
 
-  Interior Color: <?php echo $piDetail['interiorcolor']; ?><br />
-
-<?php if($piDetail['category'] == 'CD & Media'): ?>
-  Upc: <?php echo $piDetail['upc']; ?><br />
-<?php endif; ?>
-  
-  type: <?php echo $piDetail['type']; ?><br />
-  brand: <?php echo $piDetail['brand']; ?><br />
-
-<?php if($piDetail['category'] == 'Motors'): ?> 
-  model: <?php echo $piDetail['model']; ?><br />
-  pic: <?php echo $piDetail['pic']; ?><br />
-  <?php endif; ?>
-
- <?php if($piDetail['category'] == 'Motors'): ?>
-  vin: <?php echo $piDetail['vin']; ?><br />
-<?php endif; ?>
-
- <?php if($piDetail['category'] == 'Motors'): ?>
-  make: <?php echo $piDetail['make']; ?><br />
-<?php endif; ?>
-
-  ReleaseYear: <?php echo $piDetail['releaseYear']; ?><br />
-  
-   <?php if($piDetail['category'] == 'Motors'): ?>
-  Engine type: <?php echo $piDetail['engine']; ?><br />
-  <?php endif; ?>
-=======
->>>>>>> 449399b5e0144af4042e461243eebe390d843fc2
   
 
 
@@ -112,12 +51,13 @@
 
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
 
-    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?>
+    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?> 
     <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'>Bid Now</a>
     <?php } else { ?>
       <a href="#">Your Posted this Item</a>
     <?php } ?>
 <?php endif; ?>
+
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
 
