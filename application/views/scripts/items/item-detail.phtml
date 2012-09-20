@@ -10,19 +10,43 @@
 </div>                                                      
 
 <?php foreach ($this->pitemDetail as $piDetail): ?>
-  <?php $itemid = $piDetail['id']; ?><br />
-  <?php echo $piDetail['id']; ?><br />
-   <?php echo $piDetail['title']; ?><br />
-   <?php echo $piDetail['condition']; ?><br />
-   <?php echo $piDetail['countries']; ?><br />
-   <?php echo $piDetail['subtitle']; ?><br />
-   <?php echo $piDetail['SaleType']; ?><br />
-   <?php echo $piDetail['PropertyType']; ?><br />
-   <?php echo $piDetail['ZipPostalCode']; ?><br />
-   <?php echo $piDetail['StateProvince']; ?><br />
-   <?php echo $piDetail['genre']; ?><br />
-   <?php echo "user_id".$piDetail['user_id']; ?><br />
-   <?php echo $piDetail['desc']; ?><br />
+  
+  Title: <?php echo $piDetail['title']; ?><br />
+  condition: <?php echo $piDetail['condition']; ?><br />
+  countries: <?php echo $piDetail['countries']; ?><br />
+  subtitle: <?php echo $piDetail['subtitle']; ?><br />
+  SaleType: <?php echo $piDetail['SaleType']; ?><br />
+  PropertyType: <?php echo $piDetail['PropertyType']; ?><br />
+  ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?><br />
+  StateProvince: <?php echo $piDetail['StateProvince']; ?><br />
+  url: <?php echo $piDetail['url']; ?><br />
+  desc: <?php echo $piDetail['desc']; ?><br />
+  startPrice: <?php echo $piDetail['startPrice']; ?><br />
+  BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?><br />
+  Setting: <?php echo $piDetail['Setting']; ?><br />
+  PropertyType: <?php echo $piDetail['PropertyType']; ?><br />
+  NumerOfBathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?><br />
+  NumberofBedrooms: <?php echo $piDetail['NumberofBedrooms']; ?><br />
+  ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?><br />
+  StateProvince: <?php echo $piDetail['StateProvince']; ?><br />
+  PropertyAddress: <?php echo $piDetail['PropertyAddress']; ?><br />
+  SellerStateofResidence: <?php echo $piDetail['SellerStateofResidence']; ?><br />
+  mileage: <?php echo $piDetail['mileage']; ?><br />
+  ExteriorColor: <?php echo $piDetail['ExteriorColor']; ?><br />
+  interiorcolor: <?php echo $piDetail['interiorcolor']; ?><br />
+  upc: <?php echo $piDetail['upc']; ?><br />
+  type: <?php echo $piDetail['type']; ?><br />
+  brand: <?php echo $piDetail['brand']; ?><br />
+   
+  model: <?php echo $piDetail['model']; ?><br />
+  pic: <?php echo $piDetail['pic']; ?><br />
+  vin: <?php echo $piDetail['vin']; ?><br />
+  make: <?php echo $piDetail['make']; ?><br />
+  releaseYear: <?php echo $piDetail['releaseYear']; ?><br />
+  engine: <?php echo $piDetail['engine']; ?><br />
+  driveType: <?php echo $piDetail['driveType']; ?><br />
+ 
+
 
 
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
