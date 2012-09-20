@@ -216,12 +216,7 @@ $this->addElement($startPrice);
                   ->addFilter('StringTrim');
 $this->addElement($BuyItNowprice);
 
-      $endPrice = new Zend_Form_Element_Text('endPrice');
-     $endPrice->setRequired(false)
-                  ->setLabel('Desired Price')
-                  ->addFilter('StripTags')
-                  ->addFilter('StringTrim');
-                  
+    
 $this->addElement($endPrice);
                                        
       $submit = new Zend_Form_Element_Submit('Enter');

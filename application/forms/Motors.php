@@ -172,12 +172,7 @@ class Application_Form_Motors extends Zend_Form
                   ->addFilter('StripTags')
                   ->addFilter('StringTrim');
 
-      $endPrice = new Zend_Form_Element_Text('endPrice');
-      $endPrice->setRequired(false)
-                  ->setLabel('Desired Price')
-                  ->addFilter('StripTags')
-                  ->addFilter('StringTrim');
-
+      
 
 
       $submit = new Zend_Form_Element_Submit('Enter');

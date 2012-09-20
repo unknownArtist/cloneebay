@@ -48,6 +48,7 @@ class BidsController extends Zend_Controller_Action
 	                		'itemOwner_id'	=> $this->_request->getParam('itemOwnerid'),
 	                		);
 	                	$bids->insert($data);
+                        $this->_redirect('bids/email/itemID/'.$itemid .'/itemOwnerid/'.$this->_request->getParam('itemOwnerid'));
 	                	$form->reset();
 
 	                }
@@ -57,6 +58,50 @@ class BidsController extends Zend_Controller_Action
     	{
     		$this->_redirect('user/sign-in');
     	}
+
+    }
+
+     public function emailAction()
+    {
+        
+        $bids = new Application_Model_Bids();
+        $where = 'item_id='. $this->_request->getParam('itemID');
+        
+        $bids_info = $bids->fetchRow($where)->toArray();
+
+        $item = new Application_Model_Products();
+        $where = 'id='. $this->_request->getParam('itemID');
+        $item_info = $item->fetchRow($where)->toArray();
+
+        $itemOwner = new Application_Model_UserRegistration();
+        $where = 'id='. $this->_request->getParam('itemOwnerid');
+        $Owner = $itemOwner->fetchRow($where)->toArray();
+        $Owner_email = $Owner['email'];
+     
+        $smtpConfigs = array(
+            
+            'auth'          =>      'login',
+            'username'      =>      'nayatelorg',
+            'password'      =>      'brownquick321',
+            'ssl'           =>      'ssl',
+            'port'          =>       465
+            
+        );
+        
+        $smtpTransportObject = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $smtpConfigs);
+        
+        $mail = new Zend_Mail();
+        $message ='
+
+                   Dear User ! '.
+                   $Owner['f_name'].' '. $Owner['l_name'].' has bidded an amount of $'. $bids_info['amount'].' on your Item :'.$item['title'].'
+                    http://cloneebay/items/item-detail';
+                    
+        $mail->addTo($Owner_email,"john evans")
+             ->setFrom('nayatelorg@gmail.com', "Ebay Clone")
+             ->setSubject('Biding Notification')
+             ->setBodyText($message)
+             ->send($smtpTransportObject);
 
     }
 

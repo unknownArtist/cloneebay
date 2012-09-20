@@ -27,7 +27,7 @@ class Application_Form_SignIn extends Zend_Form
                  ->addFilter('StringTrim');
         
         
-        $submit = new Zend_Form_Element_Submit('Login');
+        $submit = new Zend_Form_Element_Submit('a');
 		$submit->class = "button";
         
         $this->addElements(array(
