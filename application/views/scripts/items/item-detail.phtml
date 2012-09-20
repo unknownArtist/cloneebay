@@ -1,4 +1,5 @@
 <?php if(Zend_Auth::getInstance()->hasIdentity()): ?>
+
 <h2>Welcome to home</h2>
 <?php endif; ?>
 
@@ -20,13 +21,17 @@
    <?php echo $piDetail['ZipPostalCode']; ?><br />
    <?php echo $piDetail['StateProvince']; ?><br />
    <?php echo $piDetail['genre']; ?><br />
+   <?php echo "user_id".$piDetail['user_id']; ?><br />
    <?php echo $piDetail['desc']; ?><br />
 
 
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
 
-   
+    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?>
     <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'>Bid Now</a>
+    <?php } else { ?>
+      <a href="#">Your Posted this Item</a>
+    <?php } ?>
 <?php endif; ?>
 
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>

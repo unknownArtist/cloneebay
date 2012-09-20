@@ -12,8 +12,23 @@ class BidsController extends Zend_Controller_Action
     {
     	if(Zend_Auth::getInstance()->hasIdentity())
     	{
+    		$itemid = $this->_request->getParam('itemID');
+    			
+	       $db = Zend_Db::factory('Pdo_Mysql', array(
+                'host'     => 'localhost',
+                'username' => 'root',
+                'password' => '',
+                'dbname'   => 'cloneebay'
+            ));
+
+	       $sql = "SELECT MAX( amount ) FROM tbl_bids where item_id = '$itemid'";
+
+	       $maxBid = $db->fetchRow($sql);
+              
+	        $this->view->maxBid = $maxBid;
+
 	        $form = new Application_Form_Bids();
-	        
+
 	        $this->view->form = $form;
 
 	        
@@ -27,12 +42,13 @@ class BidsController extends Zend_Controller_Action
 	                {
 	                	$bids = new Application_Model_Bids();
 	                	$data = array(
-	                		'item_id' 		=> $this->_request->getParam('itemID'),
+	                		'item_id' 		=> $itemid,
 	                		'user_id' 		=> Zend_Auth::getInstance()->getIdentity()->id,
 	                		'amount'  		=> $form->getValue('amount'),
 	                		'itemOwner_id'	=> $this->_request->getParam('itemOwnerid'),
 	                		);
 	                	$bids->insert($data);
+	                	$form->reset();
 
 	                }
             }
