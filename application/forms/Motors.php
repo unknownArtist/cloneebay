@@ -195,7 +195,7 @@ class Application_Form_Motors extends Zend_Form
     		$interiorcolor,
     		$auctionOrFixed,
     		$startPrice,
-    		$endPrice,
+    		
     		$BuyItNowprice,
 
     		$submit,

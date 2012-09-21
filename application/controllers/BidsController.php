@@ -74,10 +74,11 @@ class BidsController extends Zend_Controller_Action
         $item_info = $item->fetchRow($where)->toArray();
 
         $itemOwner = new Application_Model_UserRegistration();
-        $where = 'id='. $this->_request->getParam('itemOwnerid');
-        $Owner = $itemOwner->fetchRow($where)->toArray();
+        $wheree = 'id='. $this->_request->getParam('itemOwnerid');
+        
+        $Owner = $itemOwner->fetchRow($wheree)->toArray();
         $Owner_email = $Owner['email'];
-     
+        
         $smtpConfigs = array(
             
             'auth'          =>      'login',
@@ -94,8 +95,8 @@ class BidsController extends Zend_Controller_Action
         $message ='
 
                    Dear User ! '.
-                   $Owner['f_name'].' '. $Owner['l_name'].' has bidded an amount of $'. $bids_info['amount'].' on your Item :'.$item['title'].'
-                    http://cloneebay/items/item-detail';
+                   $Owner['f_name'].' '. $Owner['l_name'].' has bidded an amount of $'. $bids_info['amount'].' on your Item :'.$item_info['title'];
+       
                     
         $mail->addTo($Owner_email,"john evans")
              ->setFrom('nayatelorg@gmail.com', "Ebay Clone")

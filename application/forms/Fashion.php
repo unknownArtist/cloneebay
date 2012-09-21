@@ -113,7 +113,7 @@ class Application_Form_Fashion extends Zend_Form
     		$desc,
     		$auctionOrFixed,
     		$startPrice,
-    		$endPrice,
+    		
     		$BuyItNowprice,
 
     		$submit,

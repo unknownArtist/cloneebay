@@ -1,11 +1,4 @@
-<?php foreach($this->cat as $catagory): ?>
 
-		<a href=<?php echo $this->url(array(
-		'controller'=>'addpost',
-		'action'=>'add',
-		'cat'=> $catagory['CategoryName'])); ?> ><?php echo  $catagory['CategoryName']?></a>
-		
-	<?php   endforeach;?>
 <!-- <div id="slider">													
 
  </div>	 															
@@ -40,7 +33,14 @@
 
 
 <div id="content">													<!--content-->
+<?php foreach($this->cat as $catagory): ?>
 
+		<a href=<?php echo $this->url(array(
+		'controller'=>'addpost',
+		'action'=>'add',
+		'cat'=> $catagory['CategoryName'])); ?> ><?php echo  $catagory['CategoryName']?></a>
+		
+	<?php   endforeach;?>
 <h2>Sign In</h2>
 
 <div class="signin">												<!--signin-->

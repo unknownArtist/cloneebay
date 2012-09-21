@@ -1,34 +1,68 @@
-<div><?php foreach ($this->maxBid as $value) { ?>
-	<?php 
-	if(isset($value))
-	{
-	echo "This Bid must be greater than $".$value;
-	}
-	 ?>
+<div id="product">             <!--product-->
+
+<div class="productimg">
+
+</div>
+
+
+
+<div class="productviews">
+
+<ul>
+
+<li></li>
+
+<li></li>
+
+</ul>
+
+</div>
+
+
+
+<div class="productdesc">
+
+<h15>Product Name</h15>
+
+
+<a href="#"><div class="star">
+
+</div></a>
+
+<h17><div><?php foreach ($this->maxBid as $value) { ?>
+ <?php 
+ if(isset($value))
+ {
+ echo "This Bid must be greater than $".$value;
+ }
+  ?>
 <script>
-	$(function(){
+ $(function(){
 
     $('#SubmitYourBid').click(function(){
 
-		if($('#amount').val() == '')
-    	{
-    		$('#amount').css({'border-color':'red'});
-    		return false;
-    	}
-    	else if($('#amount').val() <= <?php echo $value; ?>)
-    	{
-    		alert("Your Bid must be greater than <?php echo '$'.$value; ?>");
-    		return false;
-    	}
-    	
+  if($('#amount').val() == '')
+     {
+      $('#amount').css({'border-color':'red'});
+      return false;
+     }
+     else if($('#amount').val() <= <?php echo $value; ?>)
+     {
+      alert("Your Bid must be greater than <?php echo '$'.$value; ?>");
+      return false;
+     }
+     
     });
 
 });
 </script>
 <?php }?></div>
-<?php echo $this->form; ?>
+<?php echo $this->form; ?></h17>
 
 
 
+</div>
 
 
+
+</div>

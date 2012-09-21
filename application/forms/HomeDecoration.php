@@ -217,7 +217,7 @@ $this->addElement($startPrice);
 $this->addElement($BuyItNowprice);
 
     
-$this->addElement($endPrice);
+
                                        
       $submit = new Zend_Form_Element_Submit('Enter');
         $this->addElement($submit);

@@ -113,7 +113,7 @@ class Application_Form_CollectableArt extends Zend_Form
     		$desc,
     		$auctionOrFixed,
     		$startPrice,
-    		$endPrice,
+    		
     		$BuyItNowprice,
 
     		$submit,

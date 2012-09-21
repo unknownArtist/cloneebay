@@ -155,7 +155,7 @@ class Application_Form_Electronics extends Zend_Form
     		$desc,
     		$auctionOrFixed,
     		$startPrice,
-    		$endPrice,
+    		
     		$BuyItNowprice,
     		$pic,
 
