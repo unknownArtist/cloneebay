@@ -55,6 +55,9 @@
 <?php } ?>
 <li><a href="/user/register">Join Now</a></li>
 <?php if(isset($_SESSION['cart'])): ?>
+
+	<?php $_SESSION["cart"]= array_unique($_SESSION["cart"]); ?>
+
 <li><a href="#">Cart(<?php echo count($_SESSION["cart"]);?>)</a></li>
 <?php endif; ?>
 <li>  	<a id="addToCart" href="<?php echo $this->Url(

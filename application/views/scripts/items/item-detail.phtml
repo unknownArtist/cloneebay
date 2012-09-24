@@ -40,15 +40,6 @@
 
 <div id="product">													<!--product-->
   
-
-
-  
-
-  
-
-
-
-
 <?php if($piDetail['auctionOrFixed'] == '0'): ?>
 
     <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?> 
@@ -63,36 +54,36 @@
 
   <?php if(isset($_SESSION['cart'])): ?>
 
-     <?php foreach ($_SESSION['cart'] as $item): ?>
-       <?php if($item == $piDetail['id']) {?>
-        <?php $key = '0' ?>
-        
-       <?php } //endif; ?>
-     <?php endforeach; ?>
+         <?php foreach ($_SESSION['cart'] as $item): ?>
+           <?php if($item == $piDetail['id']) {?>
+            <?php $key = '0' ?>    
+           <?php } //endif; ?>
+         <?php endforeach; ?>
 
-     <?php if($key == '0') {?>
-     <a>Item already added to your cart</a>  
-    <?php } //endif; ?>     
+         <?php if($key == '0') {?>
+         <a>Item already added to your cart</a>  
+        <?php } //endif; ?>     
 
-   <?php if($key != '0') { ?>   
-      <a id="addToCart" href="<?php echo $this->Url(
-                                 array(
-                                 'controller' =>  'items',
-                                 'action'     =>  'addtocart',
-                                 'id'         =>   $piDetail['id'],
-                                 )); ?>">Add to Cart</a>   
-     <?php }//endif; ?>     
+         <?php if($key != '0') { ?>   
+            <a id="addToCart" href="<?php echo $this->Url(
+                                       array(
+                                       'controller' =>  'items',
+                                       'action'     =>  'addtocart',
+                                       'id'         =>   $piDetail['id'],
+                                       )); ?>">Add to Cart</a>   
+           <?php }//endif; ?>     
                      
-     <?php endif; ?>
+  <?php endif; ?>
 
-         <?php if(!isset($_SESSION['cart'])): ?>
+  <?php if(!isset($_SESSION['cart'])): ?>
+
             <a id="addToCart" href="<?php echo $this->Url(
                             array(
                             'controller' =>  'items',
                             'action'     =>  'addtocart',
                             'id'         =>   $piDetail['id'],
                             )); ?>">Add to Cart</a>
-         <?php endif; ?>
+  <?php endif; ?>
 
 
 
@@ -101,6 +92,7 @@
 <?php if($piDetail['auctionOrFixed'] == '1'): ?>
   <a href="#">Buy Now</a>
 <?php endif; ?>
+
 <div class="productimg">
 
 </div>
