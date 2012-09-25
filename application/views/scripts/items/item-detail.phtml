@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <div>
@@ -337,4 +338,346 @@
 
 <h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
 
+=======
+
+
+<div>
+<?php 
+     
+?>   
+</div>                                                      
+
+<?php foreach ($this->pitemDetail as $piDetail): ?>
+
+
+<div id="cart">												<!--cart-->
+
+<h18>Quantity: <select><optgroup><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></option><option>11</option></option><option>12</option></option><option>13</option></option><option>14</option></option><option>15</option></option><option>16</option></option><option>17</option></option><option>18</option></option><option>19</option></option><option>20</option></optgroup></select></h18>
+
+
+
+<div class="addtocart">
+
+</div>
+
+
+
+<a href="#">SIGN IN </a><span> to turn on 1-click ordering</span>
+
+
+
+<h19>Not Registered yet</h19>
+
+<p>Join the millions of people who are already a part of the bids or buys family.</p>
+
+<div class="cart_register">
+
+</div>
+
+
+
+</div>
+
+
+<div id="product">													<!--product-->
+  
+<?php if($piDetail['auctionOrFixed'] == '0'): ?>
+
+    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?> 
+    <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'>Bid Now</a>
+    <?php } else { ?>
+      <a href="#">Your Posted this Item</a>
+    <?php } ?>
+<?php endif; ?>
+
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+
+  <?php if(isset($_SESSION['cart'])): ?>
+
+         <?php foreach ($_SESSION['cart'] as $item): ?>
+           <?php if($item == $piDetail['id']) {?>
+            <?php $key = '0' ?>    
+           <?php } //endif; ?>
+         <?php endforeach; ?>
+
+         <?php if($key == '0') {?>
+         <a>Item already added to your cart</a>  
+        <?php } //endif; ?>     
+
+         <?php if($key != '0') { ?>   
+            <a id="addToCart" href="<?php echo $this->Url(
+                                       array(
+                                       'controller' =>  'items',
+                                       'action'     =>  'addtocart',
+                                       'id'         =>   $piDetail['id'],
+                                       )); ?>">Add to Cart</a>   
+           <?php }//endif; ?>     
+                     
+  <?php endif; ?>
+
+  <?php if(!isset($_SESSION['cart'])): ?>
+
+            <a id="addToCart" href="<?php echo $this->Url(
+                            array(
+                            'controller' =>  'items',
+                            'action'     =>  'addtocart',
+                            'id'         =>   $piDetail['id'],
+                            )); ?>">Add to Cart</a>
+  <?php endif; ?>
+
+
+
+<?php endif; ?>
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+  <a href="#">Buy Now</a>
+<?php endif; ?>
+
+<div class="productimg">
+
+</div>
+
+
+
+<div class="productviews">
+
+<ul>
+
+<li></li>
+
+<li></li>
+
+</ul>
+
+</div>
+
+
+
+<div class="productdesc">
+
+<h15>Product Name</h15>
+
+<h16>Model Number</h16>
+
+<a href="#"><div class="star">
+
+</div></a>
+
+<h17>Last Price: $8,000.00</h17>
+
+<h17>Price: <span>$5,295.97</span></h17><a href="#">Click here for shipping details</a>
+
+<h17>You Save: $2.704.03</h17>
+
+</div>
+
+
+
+</div>																<!--product-->
+
+
+
+<div id="product_specifications">									<!--product specifications-->
+
+<h20>Product Specifications</h20>
+
+
+
+<div class="product_specifications">
+
+<ul>
+
+  <li>condition: <?php echo $piDetail['condition']; ?></li>
+  <li>countries: <?php echo $piDetail['countries']; ?></li>
+  <li>subtitle: <?php echo $piDetail['subtitle']; ?></li>
+  <li>SaleType: <?php echo $piDetail['SaleType']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>url: <?php echo $piDetail['url']; ?></li>
+  <li>description: <?php echo $piDetail['description']; ?></li>
+  <li>startPrice: <?php echo $piDetail['startPrice']; ?></li>
+  <li>BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?></li>
+  <li>Setting: <?php echo $piDetail['Setting']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>NumerOfBathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?></li>
+  <li>NumberofBedrooms: <?php echo $piDetail['NumberofBedrooms']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>PropertyAddress: <?php echo $piDetail['PropertyAddress']; ?></li>
+  <li>SellerStateofResidence: <?php echo $piDetail['SellerStateofResidence']; ?></li>
+  <li>mileage: <?php echo $piDetail['mileage']; ?><br />
+  <li>ExteriorColor: <?php echo $piDetail['ExteriorColor']; ?></li>
+  <li>interiorcolor: <?php echo $piDetail['interiorcolor']; ?></li>
+  <li>upc: <?php echo $piDetail['upc']; ?></li>
+  <li>type: <?php echo $piDetail['type']; ?></li>
+  <li>brand: <?php echo $piDetail['brand']; ?></li>
+   
+  <?php if($piDetail['category']=='Motors'):?> <li>model: <?php echo $piDetail['model']; ?></li><?php endif; ?>
+  <li>pic: <?php echo $piDetail['pic']; ?></li>
+  <li>vin: <?php echo $piDetail['vin']; ?></li>
+  <li>make: <?php echo $piDetail['make']; ?></li>
+  <li>ReleaseYear: <?php echo $piDetail['releaseYear']; ?></li>
+  <?php if($piDetail['category'] == 'Motors'): ?>
+  Engine type: <?php echo $piDetail['engine']; ?><br />
+  <?php endif; ?>
+  
+  <?php if($piDetail['category'] == 'Motors'): ?>
+     Drive Type: <?php echo $piDetail['driveType']; ?><br />
+ <?php endif; ?>
+
+
+
+</ul>
+
+</div>
+
+
+<div class="product_specifications_values"> 
+
+<ul>
+
+
+
+  <li>condition: <?php echo $piDetail['condition']; ?></li>
+  <li>countries: <?php echo $piDetail['countries']; ?></li>
+  <li>subtitle: <?php echo $piDetail['subtitle']; ?></li>
+  <li>SaleType: <?php echo $piDetail['SaleType']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>url: <?php echo $piDetail['url']; ?></li>
+  <li>description: <?php echo $piDetail['description']; ?></li>
+  <li>startPrice: <?php echo $piDetail['startPrice']; ?></li>
+  <li>BuyItNowprice: <?php echo $piDetail['BuyItNowprice']; ?></li>
+  <li>Setting: <?php echo $piDetail['Setting']; ?></li>
+  <li>PropertyType: <?php echo $piDetail['PropertyType']; ?></li>
+  <li>NumerOfBathrooms: <?php echo $piDetail['NumerOfBathrooms']; ?></li>
+  <li>NumberofBedrooms: <?php echo $piDetail['NumberofBedrooms']; ?></li>
+  <li>ZipPostalCode: <?php echo $piDetail['ZipPostalCode']; ?></li>
+  <li>StateProvince: <?php echo $piDetail['StateProvince']; ?></li>
+  <li>PropertyAddress: <?php echo $piDetail['PropertyAddress']; ?></li>
+  <li>SellerStateofResidence: <?php echo $piDetail['SellerStateofResidence']; ?></li>
+  <li>mileage: <?php echo $piDetail['mileage']; ?><br />
+  <li>ExteriorColor: <?php echo $piDetail['ExteriorColor']; ?></li>
+  <li>interiorcolor: <?php echo $piDetail['interiorcolor']; ?></li>
+  <li>upc: <?php echo $piDetail['upc']; ?></li>
+  <li>type: <?php echo $piDetail['type']; ?></li>
+  <li>brand: <?php echo $piDetail['brand']; ?></li>
+   
+  <?php if($piDetail['category']=='Motors'):?> <li>model: <?php echo $piDetail['model']; ?></li><?php endif; ?>
+  <li>pic: <?php echo $piDetail['pic']; ?></li>
+  <li>vin: <?php echo $piDetail['vin']; ?></li>
+  <li>make: <?php echo $piDetail['make']; ?></li>
+  <li>ReleaseYear: <?php echo $piDetail['releaseYear']; ?></li>
+  
+     <?php if($piDetail['category'] == 'Motors'): ?>
+  Engine type: <?php echo $piDetail['engine']; ?><br />
+  <?php endif; ?>
+  
+  <?php if($piDetail['category'] == 'Motors'): ?>
+     Drive Type: <?php echo $piDetail['driveType']; ?><br />
+ <?php endif; ?>
+
+
+
+</ul>
+
+</div>
+
+
+</div>																<!--product specifications-->
+
+
+  <?php endforeach; ?>
+
+
+<div id="featured_slider">						<!--featured-->
+
+<h22>Related Products</h22>
+
+
+
+<div id="arrow" class="arrowl">
+
+</div>
+
+
+
+<div id="fslider">
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span> Watches</span></div>
+
+<div class="ftext1">Price:<span> 5$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 10$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 70$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 59.7$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 15$</span></div>
+
+</div>
+
+
+
+</div>
+
+<div id="arrow" class="arrowr">
+
+</div>
+
+
+
+
+
+</div>	
+
+
+
+
+
+<div class="social">
+
+<h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
+
+>>>>>>> 4bb917da29e50f45b187ee6fc9164540c78397fe
 </div>

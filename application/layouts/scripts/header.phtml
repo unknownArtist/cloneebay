@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -120,4 +121,122 @@
 
 
 
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/my.js"></script>
+
+<title>Auction</title>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="container">												<!--container-->
+
+
+
+<div id="header">													<!--header-->
+
+
+
+<a href="/index"><div class="logo">													<!--Logo-->
+
+</div></a>																<!--Logo-->
+
+
+
+<div class="fblike">												<!--Facebook Like-->
+
+</div>																<!--Facebook Like-->
+
+
+
+<div class="menu">													<!--Menu-->
+
+
+
+<ul>
+
+<li><a href="/addpost/select-Catagory">Post a Free Ad</a></li>
+
+<li><a href="#">Community</a></li>
+<?php if(!Zend_Auth::getInstance()->hasIdentity()) { ?>
+<li><a href="/user/sign-in">Sign In</a></li>
+<?php } ?>
+<li><a href="/user/register">Join Now</a></li>
+<?php if(isset($_SESSION['cart'])): ?>
+
+	<?php $_SESSION["cart"]= array_unique($_SESSION["cart"]); ?>
+
+<li><a href="#">Cart(<?php echo count($_SESSION["cart"]);?>)</a></li>
+<?php endif; ?>
+<li>  	<a id="addToCart" href="<?php echo $this->Url(
+                            array(
+                            'controller' =>  'items',
+                            'action'     =>  'checkout',
+                            )); ?>">Checkout</a>
+
+
+</li>
+<?php if(Zend_Auth::getInstance()->hasIdentity()) { ?>
+<li><a href="/user/logout">Logout</a></li>
+<?php } ?>
+
+</ul>
+
+
+
+</div>																<!--Menu-->
+
+
+
+<div id="search">													<!--search-->
+
+<div class="searchbg">
+
+
+<form name="search" action="search/index" method="post">
+
+	<input type="text" class="rounded" value="" name="searchtxt"/>
+
+	<select name="Category" class="rounded">
+
+	<optgroup>
+
+	<option >Select a Category</option>
+
+	  <?php  $cat = new Application_Model_Categories();?>
+	  <?php $data = $cat->fetchAll(); ?>
+
+		<?php foreach($data as $item): ?>
+				<option value="<?php echo $item['CategoryName'];?>"><?php echo $item['CategoryName'];?></option>
+	     <?php endforeach; ?>
+
+	</optgroup>
+
+	</select>
+
+	 <input class="button" type="submit" value="" />
+     
+</form>
+
+</div>																<!--search-->
+
+<!-- <a href="#" ><h1>Advanced</h1></a> -->
+
+>>>>>>> 4bb917da29e50f45b187ee6fc9164540c78397fe
 </div>					
