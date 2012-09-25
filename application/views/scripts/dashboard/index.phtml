@@ -1,0 +1,63 @@
+
+
+
+
+                                                     
+<div class="clear"> 
+
+<h3>Your Posted Items</h3> </div>
+
+
+
+
+
+
+
+
+<div id="product">	
+
+
+
+
+
+<div class="itemlist">
+ <img src="#"  />
+  <?php
+
+ $count = 0;
+  foreach($this->bids_info as $value_b){
+  foreach($this->item_info as $value_i){
+  foreach($this->owner_info as $value_o){
+
+  //echo 'Item[' . $i . '] : ' . $value_i['title'] . "<br/>";
+  echo 'Item : ' . $value_i['title'] . "<br/>";
+  echo 'Bidder: ' .$value_o['f_name'].' ' .$value_o['l_name']."<br/>";
+  echo 'Amount : ' . $value_b['amount'] . "<br/>";
+  echo 'Bid Date : '.$value_b['bid_date']."<br/>";
+  $count++;
+}
+}
+}
+
+?>           
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="social">
+
+<h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
+
+</div>
+
+
+

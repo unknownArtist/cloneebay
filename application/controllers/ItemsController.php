@@ -35,6 +35,10 @@ class ItemsController extends Zend_Controller_Action
         $products = new Application_Model_Products();
         $where = "id = '$id'";
         $this->view->pitemDetail = $products->fetchAll($where)->toArray();
+		
+		
+		$products = new Application_Model_Categories();
+       $this->view->items = $products->fetchAll()->toArray();
 
     }
 

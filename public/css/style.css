@@ -500,6 +500,21 @@ margin:20px 0px 0px 30px;
 
 }
 
+h1 a
+
+{
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#0066CC;
+
+float:left;
+
+margin:20px 0px 0px 30px;
+
+}
 
 
 h1:hover
@@ -686,13 +701,33 @@ margin: 15px 0px 0px 115px;
 
 padding:5px 10px 10px 10px;
 
-
-
 }
 
 
 
 h2
+
+{
+
+font-family:"Century Gothic";
+
+font-size:17px;
+
+color:#0066CC;
+
+float:left;
+
+margin:5px 0px 5px 17px;
+
+width:375px;
+
+text-transform:uppercase;
+
+}
+
+
+
+h2 a
 
 {
 
@@ -2359,7 +2394,7 @@ height:25px;
 
 width:175px;
 
-margin:10px 0px 0px 50px;
+margin:10px auto 0px auto;
 
 float:left;
 
@@ -2372,6 +2407,78 @@ float:left;
 {
 
 background-image:url(/images/addtocart2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#cart .buynow
+
+{
+
+background-image:url(/images/buynow.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px auto 0px auto;
+
+
+
+}
+
+
+
+#cart .buynow:hover
+
+{
+
+background-image:url(/images/buynow2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#cart .bitnow
+
+{
+
+background-image:url(/images/bitnow.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px auto 0px auto;
+
+float:left;
+
+}
+
+
+
+#cart .bitnow:hover
+
+{
+
+background-image:url(/images/bitnow2.png);
 
 background-repeat:no-repeat;
 
@@ -2524,6 +2631,11 @@ width:137px;
 
 
 }
+
+
+
+
+
 
 
 
@@ -2709,27 +2821,375 @@ color:#7e7e7e;
 
 }
 
+.clear
+{
+	clear:both;
+	height:2px;
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px
+}
+
+.itemlist{
+	float:left;
+	width:200px;
+	
+	height:auto;
+	margin-left:20px;
+	margin-top:20px;
+}
+
+.itemlistitem{
+	float:left;
+	width:200px;
+	height:220px;
+	margin-left:120px;
+	margin-top:20px;
+}
+
+.itemlist img{
+	float:left;
+	width:200px;
+	height:200px;
+}
+
+.itemlist h1{
+	float:left;
+}
+.itemlisth2{
+	float:left;
+}					
+.itemlist h3{
+	float:left;
+}
 
 
 
 
 
+#recart
+
+{
+
+background-image:url(/images/addbg.png);
+
+background-repeat:repeat;
+
+border:1px solid #bcc4ca;
+
+float:right;
+
+height:auto;
+
+width:255px;
+
+min-height:105px;
+
+margin:25px 80px 0px 0px;
+
+}
+
+
+
+#recart h18
+
+{
+
+font-family:"Century Gothic";
+
+font-size:15px;
+
+color:#000000;
+
+float:left;
+
+margin:20px 0px 2px 65px;
+
+text-align:center;
+
+}
+
+
+
+#recart .addtocart
+
+{
+
+background-image:url(/images/addtocart.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px auto 0px auto;
+
+float:left;
+
+}
+
+
+
+#recart .addtocart:hover
+
+{
+
+background-image:url(/images/addtocart2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#recart .buynow
+
+{
+
+background-image:url(/images/buynow.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px auto 0px 0px;
+
+
+
+}
+
+
+
+#recart .buynow:hover
+
+{
+
+background-image:url(/images/buynow2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#recart .bitnow
+
+{
+
+background-image:url(/images/bitnow.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+margin:10px auto 0px auto;
+
+float:left;
+
+}
+
+
+
+#recart .bitnow:hover
+
+{
+
+background-image:url(/images/bitnow2.png);
+
+background-repeat:no-repeat;
+
+height:25px;
+
+width:175px;
+
+}
+
+
+
+#recart a
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #748EDC;
+
+margin: 10px 5px 0px 43px;
+
+float: left;
+
+text-align: center;
+
+}
+
+
+
+#recart a:hover
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #000000;
+
+text-align: center;
+
+}
 
 
 
 
 
+#recart span
+
+{
+
+font-family: Arial;
+
+font-size: 11px;
+
+color: #000000;
+
+float: left;
+
+text-align: center;
+
+margin: 10px 5px 0px 0px;
+
+}
 
 
 
 
 
+#recart h19
+
+{
+
+font-family: Arial;
+
+font-size: 12px;
+
+color: #848484;
+
+float: left;
+
+text-align: center;
+
+margin: 10px 5px 0px 10px;
+
+}
 
 
 
 
 
+#recart p
+
+{
+
+font-family: Arial;
+
+font-size: 12px;
+
+color: #000000;
+
+float: left;
+
+text-align: left;
+
+margin: 5px 10px 0px 10px;
+
+}
 
 
 
+.cart_register
 
+{
+
+background-image:url(/images/register.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+margin: 15px 0px 10px 57px;
+
+
+
+}
+
+
+
+.cart_register:hover
+
+{
+
+background-image:url(/images/register2.png);
+
+background-repeat:no-repeat;
+
+float:left;
+
+height:23px;
+
+width:137px;
+
+
+
+}				
+				
+
+
+.catbox
+
+				
+.catbox{
+	float:left;
+	width:200px;
+	
+	height:auto;
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+.catbox img{
+	float:left;
+	width:200px;
+	height:100px;
+}
+
+.catbox h1{
+	float:left;
+}
+.catbox h2{
+	float:left;
+}					
+.catbox h3{
+	float:left;
+}
+				

@@ -10,20 +10,26 @@
 
 <?php if(isset($_SESSION['cart'])): ?>
 
-<?php foreach($_SESSION['cart'] as $item): ?>
-  <?php  $products = new Application_Model_Products();?>
-  <?php $where = "id = '$item'"; ?>
-  <?php $data = $products->fetchAll($where); ?>
+<form name="buy" action="" method="post">
 
-    <?php foreach ($data as $piDetail): ?>
-    <?php echo $piDetail['title']; ?>
-    <?php echo $piDetail['BuyItNowprice']; ?>
+	<?php foreach($_SESSION['cart'] as $item): ?>
+	  <?php  $products = new Application_Model_Products();?>
+	  <?php $where = "id = '$item'"; ?>
+	  <?php $data = $products->fetchAll($where); ?>
 
-    <input type="text" class="rounded" value="Quantity" name="Quantity" onfocus="this.value=''; "/>
+	    <?php foreach ($data as $piDetail): ?>
+	    <?php echo $piDetail['title']; ?>
+	    <?php echo $piDetail['BuyItNowprice']; ?>
+	    <input type="text" class="rounded" value="Quantity" name=<?php echo $piDetail['id']; ?> onfocus="this.value=''; "/>
+	    <?php endforeach; ?>
+	    <br />
 
-     <?php endforeach; ?>
-    <br />
-<?php endforeach; ?>
+	<?php endforeach; ?>
+
+	   <input type="submit" value="Buy" />
+</form>
+
+
 
 <?php endif; ?>
 <div id="categories">                                               <!--categories-->

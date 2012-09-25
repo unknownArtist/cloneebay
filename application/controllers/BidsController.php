@@ -10,6 +10,12 @@ class BidsController extends Zend_Controller_Action
 
     public function indexAction()
     {
+	   $products = new Application_Model_Categories();
+       $this->view->items = $products->fetchAll()->toArray();
+	   
+
+		
+		
     	if(Zend_Auth::getInstance()->hasIdentity())
     	{
     		$itemid = $this->_request->getParam('itemID');
@@ -58,6 +64,11 @@ class BidsController extends Zend_Controller_Action
     	{
     		$this->_redirect('user/sign-in');
     	}
+		
+		
+	 
+		
+		
 
     }
 

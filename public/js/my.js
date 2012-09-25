@@ -13,4 +13,3 @@ $("#BuyItNowprice").hide();
 	  }
 	});
 });
-

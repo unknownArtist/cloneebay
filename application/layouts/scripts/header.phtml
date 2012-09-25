@@ -7,9 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/my.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
 <title>Auction</title>
 
@@ -66,7 +64,8 @@
 
 </li>
 <?php if(Zend_Auth::getInstance()->hasIdentity()) { ?>
-<li><a href="/user/logout">Logout</a></li>
+<li><a href="/user/logout">Logout</li>
+<li><a href="/dashboard">My Dashboard</li>
 <?php } ?>
 
 </ul>
@@ -82,33 +81,43 @@
 <div class="searchbg">
 
 
-<form name="search" action="search/index" method="post">
 
-	<input type="text" class="rounded" value="" name="searchtxt"/>
+<input type="text" class="rounded" value="Search Here..." name="search" onfocus="this.value=''; "/>
 
-	<select name="Category" class="rounded">
+<select class="rounded">
 
-	<optgroup>
+<optgroup>
 
-	<option >Select a Category</option>
+<option>Select a Category</option>
 
-	  <?php  $cat = new Application_Model_Categories();?>
-	  <?php $data = $cat->fetchAll(); ?>
+<option>Category 1</option>
 
-		<?php foreach($data as $item): ?>
-				<option value="<?php echo $item['CategoryName'];?>"><?php echo $item['CategoryName'];?></option>
-	     <?php endforeach; ?>
+<option>Category 2</option>
 
-	</optgroup>
+<option>Category 3</option>
 
-	</select>
+<option>Category 4</option>
 
-	 <input class="button" type="submit" value="" />
-     
-</form>
+</optgroup>
+
+</select>
+
+
+
+<a href="#"><div class="button">
+
+</div></a>
+
+</div>
+
+
+
+<!-- <a href="#" ><h1>Advanced</h1></a> -->
+
+
 
 </div>																<!--search-->
 
-<!-- <a href="#" ><h1>Advanced</h1></a> -->
+
 
 </div>					

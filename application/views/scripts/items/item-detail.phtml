@@ -6,101 +6,36 @@
 ?>   
 </div>                                                      
 
+<div id="categories">                                               <!--categories-->
+<h3>More Categories</h3>
+<ul>
+
+<?php foreach ($this->items as $item): ?>
+ <li><a href=<?php echo $this->url(array(
+		'controller'=>'items',
+		'action'=>'list',
+		'cat'=> $item['CategoryName'])); ?> ><?php echo  $item['CategoryName']?></a></li>
+
+  <?php endforeach; ?>
+
+</ul>
+
+</div>
+
+
+
+
+
 <?php foreach ($this->pitemDetail as $piDetail): ?>
 
 
-<div id="cart">												<!--cart-->
 
-<h18>Quantity: <select><optgroup><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></option><option>11</option></option><option>12</option></option><option>13</option></option><option>14</option></option><option>15</option></option><option>16</option></option><option>17</option></option><option>18</option></option><option>19</option></option><option>20</option></optgroup></select></h18>
-
-
-
-<div class="addtocart">
-
-</div>
-
-
-
-<a href="#">SIGN IN </a><span> to turn on 1-click ordering</span>
-
-
-
-<h19>Not Registered yet</h19>
-
-<p>Join the millions of people who are already a part of the bids or buys family.</p>
-
-<div class="cart_register">
-
-</div>
-
-
-
-</div>
 
 
 <div id="product">													<!--product-->
   
 
 
-  
-
-  
-
-
-
-
-<?php if($piDetail['auctionOrFixed'] == '0'): ?>
-
-    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?> 
-    <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'>Bid Now</a>
-    <?php } else { ?>
-      <a href="#">Your Posted this Item</a>
-    <?php } ?>
-<?php endif; ?>
-
-
-<?php if($piDetail['auctionOrFixed'] == '1'): ?>
-
-  <?php if(isset($_SESSION['cart'])): ?>
-
-     <?php foreach ($_SESSION['cart'] as $item): ?>
-       <?php if($item == $piDetail['id']) {?>
-        <?php $key = '0' ?>
-        
-       <?php } //endif; ?>
-     <?php endforeach; ?>
-
-     <?php if($key == '0') {?>
-     <a>Item already added to your cart</a>  
-    <?php } //endif; ?>     
-
-   <?php if($key != '0') { ?>   
-      <a id="addToCart" href="<?php echo $this->Url(
-                                 array(
-                                 'controller' =>  'items',
-                                 'action'     =>  'addtocart',
-                                 'id'         =>   $piDetail['id'],
-                                 )); ?>">Add to Cart</a>   
-     <?php }//endif; ?>     
-                     
-     <?php endif; ?>
-
-         <?php if(!isset($_SESSION['cart'])): ?>
-            <a id="addToCart" href="<?php echo $this->Url(
-                            array(
-                            'controller' =>  'items',
-                            'action'     =>  'addtocart',
-                            'id'         =>   $piDetail['id'],
-                            )); ?>">Add to Cart</a>
-         <?php endif; ?>
-
-
-
-<?php endif; ?>
-
-<?php if($piDetail['auctionOrFixed'] == '1'): ?>
-  <a href="#">Buy Now</a>
-<?php endif; ?>
 <div class="productimg">
 
 </div>
@@ -123,19 +58,75 @@
 
 <div class="productdesc">
 
-<h15>Product Name</h15>
+<h15><?php echo $piDetail['title']; ?></h15>
 
-<h16>Model Number</h16>
+<h16><?php echo $piDetail['subtitle']; ?></h16>
 
-<a href="#"><div class="star">
+<!-- <a href="#"><div class="star">
 
-</div></a>
+</div></a> -->
 
-<h17>Last Price: $8,000.00</h17>
+<h17> Condition : <?php echo $piDetail['condition']; ?> item  </h17>
 
-<h17>Price: <span>$5,295.97</span></h17><a href="#">Click here for shipping details</a>
+<h17>Price: <span>$ <?php echo $piDetail['BuyItNowprice']; ?> <!-- or Last Bid price here  --> </span></h17><a href="#">Click here for shipping details</a>
 
 <h17>You Save: $2.704.03</h17>
+
+<div id="recart">												<!--cart-->
+<?php if($piDetail['auctionOrFixed'] == '0'): ?>
+
+    <?php if($piDetail['user_id'] != Zend_Auth::getInstance()->getIdentity()->id) { ?> 
+    <a href='/bids/index/itemID/<?php echo $piDetail["id"];?>/itemOwnerid/<?php echo $piDetail["user_id"];?>'><div class="bitnow"></div></a>
+    <?php } else { ?>
+      <a href="#">Your Posted this Item</a>
+    <?php } ?>
+<?php endif; ?>
+
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+
+  <?php if(isset($_SESSION['cart'])): ?>
+
+         <?php foreach ($_SESSION['cart'] as $item): ?>
+           <?php if($item == $piDetail['id']) {?>
+            <?php $key = '0' ?>    
+           <?php } //endif; ?>
+         <?php endforeach; ?>
+
+         <?php if($key == '0') {?>
+         <a>Item already added to your cart</a>  
+        <?php } //endif; ?>     
+
+         <?php if($key != '0') { ?>   
+            <a id="addToCart" href="<?php echo $this->Url(
+                                       array(
+                                       'controller' =>  'items',
+                                       'action'     =>  'addtocart',
+                                       'id'         =>   $piDetail['id'],
+                                       )); ?>"><div class="addtocart"></div></a>   
+           <?php }//endif; ?>     
+                     
+  <?php endif; ?>
+
+  <?php if(!isset($_SESSION['cart'])): ?>
+
+            <a id="addToCart" href="<?php echo $this->Url(
+                            array(
+                            'controller' =>  'items',
+                            'action'     =>  'addtocart',
+                            'id'         =>   $piDetail['id'],
+                            )); ?>"><div class="addtocart"></div></a>
+  <?php endif; ?>
+
+
+
+<?php endif; ?>
+
+<?php if($piDetail['auctionOrFixed'] == '1'): ?>
+  <a href="#"><div class="buynow"></div></a>
+<?php endif; ?>
+
+</div>
 
 </div>
 
@@ -147,7 +138,7 @@
 
 <div id="product_specifications">									<!--product specifications-->
 
-<h20>Product Specifications</h20>
+<h3>Product Specifications</h3>
 
 
 

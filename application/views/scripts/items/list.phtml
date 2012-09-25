@@ -1,5 +1,5 @@
 <?php if(Zend_Auth::getInstance()->hasIdentity()): ?>
-<h2>Welcome to home</h2>
+
 <?php endif; ?>
 
 <div>
@@ -7,29 +7,22 @@
      
 ?>   
 </div>                                                      
+<div class="clear"> 
+
+<h3>Latest Listed Item in this Category</h3> </div>
 
 
-
-<?php foreach ($this->pitems as $pitem): ?>
-
-
-<div id="product">													<!--product-->
-
-
-
-<div class="productimg">
-
-</div>
-
-
-
-<div class="productviews">
-
+<div id="categories">                                               <!--categories-->
+<h3>More Categories</h3>
 <ul>
 
-<li></li>
+<?php foreach ($this->items as $item): ?>
+ <li><a href=<?php echo $this->url(array(
+		'controller'=>'items',
+		'action'=>'list',
+		'cat'=> $item['CategoryName'])); ?> ><?php echo  $item['CategoryName']?></a></li>
 
-<li></li>
+  <?php endforeach; ?>
 
 </ul>
 
@@ -37,41 +30,47 @@
 
 
 
-<div class="productdesc">
 
-<h15>
 
-		<a href=<?php echo $this->url(array(
+<div id="product">	
+
+
+<?php foreach ($this->pitems as $pitem): ?>
+
+
+<div class="itemlist">
+<a href=<?php echo $this->url(array(
 		'controller'=>'items',
 		'action'=>'item-detail',
 		'id'=> $pitem['id'],
-		)); ?> ><?php echo  $pitem['title']?></a>
-        
-        </h15>
+		)); ?> ><img src="#"  /></a>
+             
+<h2><a href=<?php echo $this->url(array(
+		'controller'=>'items',
+		'action'=>'item-detail',
+		'id'=> $pitem['id'],
+		)); ?> ><?php echo  $pitem['title']?></a></h2>
 
-<h16>Model Number</h16>
 
-<a href="#"><div class="star">
 
-</div></a>
+<h5> Starting Price: $ <?php echo $pitem['startPrice']; ?></h5>
 
-<h17>Last Price: $8,000.00</h17>
-
-<h17>Price: <span>$5,295.97</span></h17><a href="#">Click here for shipping details</a>
-
-<h17>You Save: $2.704.03</h17>
+<!-- or <h3> Buy It now for <span>$ <?php echo $pitem['BuyItNowprice']; ?></h3> -->
 
 </div>
-
-
-
-</div>
-
-
 
 <?php endforeach; ?>
+</div>
 
 
+
+
+               
+               
+               
+               
+               
+               
 
 <div class="social">
 

@@ -1,3 +1,26 @@
+
+<div class="clear"> 
+
+<h3>Please Make your Bid </h3> </div>
+
+
+
+<div id="categories">                                               <!--categories-->
+
+<ul>
+
+<?php foreach ($this->items as $item): ?>
+ <li><a href=<?php echo $this->url(array(
+		'controller'=>'items',
+		'action'=>'list',
+		'cat'=> $item['CategoryName'])); ?> ><?php echo  $item['CategoryName']?></a></li>
+
+  <?php endforeach; ?>
+
+</ul>
+
+</div>
+ 
 <div id="product">             <!--product-->
 
 <div class="productimg">
@@ -22,12 +45,12 @@
 
 <div class="productdesc">
 
-<h15>Product Name</h15>
+<!-- <h15>Product Name</h15> -->
 
 
-<a href="#"><div class="star">
+<!-- <a href="#"><div class="star">
 
-</div></a>
+</div></a> -->
 
 <h17><div><?php foreach ($this->maxBid as $value) { ?>
  <?php 
@@ -64,5 +87,93 @@
 </div>
 
 
+
+</div>
+
+
+
+<div id="featured_slider">						<!--featured-->
+
+<h22>Related Products</h22>
+
+
+
+<div id="arrow" class="arrowl">
+
+</div>
+
+
+
+<div id="fslider">
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span> Watches</span></div>
+
+<div class="ftext1">Price:<span> 5$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 10$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 70$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 59.7$</span></div>
+
+</div>
+
+<div class="col2">
+
+<div class="fimage"></div>
+
+<div class="ftext1">Category:<span>  Watches</span></div>
+
+<div class="ftext1">Price:<span> 15$</span></div>
+
+</div>
+
+
+
+</div>
+
+<div id="arrow" class="arrowr">
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div class="social">
+
+<h8>Share This Link: <a href="#">www.abcdefg.com/home</a></h8>
 
 </div>
